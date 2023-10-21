@@ -3,14 +3,14 @@ jQuery(function ($) {
 
     // ページが読み込まれたときに実行
     $(document).ready(function () {
-        $(".page-top").hide(); // 最初は非表示に
+        $(".js-page-top").hide(); // 最初は非表示に
     });
 
     // スクロールイベント
     $(window).on("scroll", function () {
         let scrollHeight = $(document).height();
         let scrollPosition = $(window).height() + $(window).scrollTop();
-        let footHeight = $(".footer").innerHeight();
+        let footHeight = $(".js-footer").innerHeight();
         let scrollPositionFromTop = $(window).scrollTop();
 
         // ボタン位置の調整
@@ -26,13 +26,13 @@ jQuery(function ($) {
                       bottom: "0px",
                       top: "auto",
                   };
-        $(".page-top").css(cssSettings);
+        $(".js-page-top").css(cssSettings);
 
         // ボタンの表示・非表示
         if (scrollPositionFromTop > 200) {
-            $(".page-top").fadeIn();
+            $(".js-page-top").fadeIn();
         } else {
-            $(".page-top").fadeOut();
+            $(".js-page-top").fadeOut();
         }
     });
 
@@ -62,18 +62,6 @@ jQuery(function ($) {
                 $(".js-header").addClass("is-current");
                 $(".js-drawer").hide().addClass("is-current").fadeIn(500);
                 $(".js-hamburger").addClass("is-current");
-            }
-        });
-    });
-
-    // スクロールするとロゴの色変更
-    $(function () {
-        $(window).on("scroll", function () {
-            var sliderHeight = $(".js-top-mv").height();
-            if (sliderHeight - 30 < $(this).scrollTop()) {
-                $(".js-header").addClass("is-headerColorScroll");
-            } else {
-                $(".js-header").removeClass("is-headerColorScroll");
             }
         });
     });
@@ -209,8 +197,8 @@ jQuery(function ($) {
 
         // .colorboxの付いた全ての要素に対して下記の処理を行う
         box.each(function () {
-            $(this).append('<div class="color"></div>');
-            var color = $(this).find($(".color")),
+            $(this).append('<div class="is-color"></div>');
+            var color = $(this).find($(".is-color")),
                 image = $(this).find("img");
             var counter = 0;
 

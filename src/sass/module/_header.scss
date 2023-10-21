@@ -85,7 +85,6 @@
 
 .header__nav-item a::after {
     content: "";
-    /*絶対配置で線の位置を決める*/
     position: absolute;
     bottom: rem(15);
     left: 10%;
@@ -105,9 +104,4 @@
 
 .header.is-current {
     background-color: $green-accent;
-}
-
-/* スクロールしたらヘッダーメニューのカラー変更 */
-.header.is-headerColorScroll {
-    transition: all 0.5s ease 0s;
 }
