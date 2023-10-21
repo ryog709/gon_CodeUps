@@ -6,12 +6,10 @@
     font-weight: $regular;
     line-height: 1;
     color: $green-accent;
-    padding-top: rem(4);
-    @include mq("md") {
-        padding-top: rem(8);
-    }
 }
 
-.center {
-    text-align: center;
+.section-sub-title.section-sub-title--white {
+    @include mq("md") {
+        color: $white;
+    }
 }

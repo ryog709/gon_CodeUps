@@ -14,11 +14,24 @@
     min-height: inherit;
 }
 
+.top-opening__mv {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .top-mv__swiper,
 .top-mv__swiper-wrapper,
 .top-mv__swiper-slide {
     height: inherit;
     min-height: inherit;
+}
+
+.swiper-wrapper {
+    // transition-timing-function: linear;
 }
 
 .top-mv__picture {
@@ -27,13 +40,11 @@
     min-height: inherit;
 }
 
-
 .top-mv__picture img {
     height: inherit;
     min-height: inherit;
     object-fit: cover;
 }
-
 
 .top-mv__title-content {
     color: $white;
@@ -52,7 +63,7 @@
     font-size: rem(40);
     font-weight: $regular;
     letter-spacing: 0.54em;
-    font-family: $base-en;
+    font-family: $font-en;
     text-transform: uppercase;
     @include mq("md") {
         font-size: rem(80);
@@ -60,7 +71,8 @@
 }
 
 .top-mv__title-sub {
+    display: inline-block;
     font-size: rem(20);
     font-weight: $regular;
-    margin-top: rem(7);
+    margin-top: rem(16);
 }

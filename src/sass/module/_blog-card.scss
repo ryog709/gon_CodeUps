@@ -1,7 +1,9 @@
 @use "global" as *;
 
 .blog-card {
-    box-shadow:  rem(2) rem(2)  rem(10) 0 rgba(0, 0, 0, 0.25);
+    box-shadow: rem(2) rem(2) rem(10) 0 rgba(0, 0, 0, 0.25);
+    padding: rem(16) rem(16) rem(24);
+    background-color: $white;
 }
 
 .blog-card a {
@@ -18,7 +20,7 @@
 }
 
 .blog-card__body {
-    padding: rem(24) rem(16);
+    margin-top: rem(20);
 }
 
 .blog-card__date {
@@ -33,12 +35,13 @@
     color: $green;
     font-weight: $medium;
     line-height: 1;
-	border-bottom:  rem(1) solid $green-accent;
-	padding-bottom: rem(4);
+    border-bottom: rem(1) solid $green-accent;
+    padding-bottom: rem(4);
+    margin-top: rem(6);
 }
 
 .blog-card__text {
     font-weight: $regular;
-	color: $black;
-	margin-top: rem(16);
+    color: $black;
+    margin-top: rem(16);
 }

@@ -56,6 +56,10 @@
     line-height: 1;
     padding: rem(8) rem(11.5);
     border: rem(1) solid $green-accent;
+    margin-top: rem(4);
+    @include mq("md") {
+        padding: rem(10) rem(15);
+    }
 }
 
 .voice-card__title {
@@ -64,7 +68,6 @@
     font-weight: $medium;
     border-bottom: rem(1) solid $green-accent;
     margin-top: rem(5);
-    padding-bottom: rem(4);
     @include mq("md") {
         font-size: rem(24);
         margin-top: rem(8);

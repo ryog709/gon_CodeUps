@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.menu-list {
+.footer-menu {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
@@ -13,7 +13,7 @@
     }
 }
 
-.menu-list__left {
+.footer-menu__left {
     padding-left: rem(20);
     @include mq("md") {
         display: grid;
@@ -22,46 +22,47 @@
     }
 }
 
-.menu-list__right {
-    padding-left: rem(20);
+.footer-menu__right {
+    padding-left: rem(14);
     margin-left: rem(16);
     @include mq("md") {
+        margin-left: rem(22);
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 1fr;
     }
 }
 
-.menu-list__left .menu-list__wrap:nth-child(2) {
+.footer-menu__left .footer-menu__wrap:nth-child(2) {
     @include mq("md") {
         margin-left: rem(27);
     }
 }
 
-.menu-list__right .menu-list__wrap:nth-child(2) {
+.footer-menu__right .footer-menu__wrap:nth-child(2) {
     @include mq("md") {
         margin-left: rem(20);
     }
 }
 
-.menu-list__items:nth-child(n + 2):nth-child(-n + 4),
-.menu-list__items:nth-child(n + 6) {
+.footer-menu__items:nth-child(n + 2):nth-child(-n + 4),
+.footer-menu__items:nth-child(n + 6) {
     margin-top: rem(20);
     @include mq("md") {
         margin-top: rem(14);
     }
 }
 
-.menu-list__item {
+.footer-menu__item {
     color: $white;
     font-size: rem(16);
     font-weight: $regular;
     line-height: calc(18 / 16);
 }
 
-.menu-list__item-head a,
-.menu-list__item a {
+.footer-menu__item-head a,
+.footer-menu__item a {
     display: flex;
     align-items: center;
-    padding: rem(12.5) 0;
+    padding: rem(12.7) 0;
 }

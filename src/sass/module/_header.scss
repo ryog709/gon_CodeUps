@@ -25,6 +25,9 @@
     height: inherit;
     max-width: rem(102);
     width: 100%;
+    @include mq("md") {
+        max-width: rem(133);
+    }
 }
 
 .header__logo a {
@@ -101,6 +104,10 @@
 
 .header__nav-item a:hover::after {
     transform: scale(1, 1); /*X方向にスケール拡大*/
+}
+
+.header.is-current {
+    background-color: $green-accent;
 }
 
 /* スクロールしたらヘッダーメニューのカラー変更 */

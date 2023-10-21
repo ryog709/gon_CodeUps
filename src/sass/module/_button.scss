@@ -3,6 +3,7 @@
 .button {
     max-width: rem(202);
     width: 100%;
+    font-size:  rem(14);
     padding: rem(16);
     cursor: pointer;
     border: 1px solid $green-accent;
@@ -14,11 +15,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: rem(6);
 }
 
 .button span {
-  padding-left: rem(7);
-  padding-bottom: rem(8);
+    display: inline-block;
+    padding-bottom: rem(5);
 }
 
 .button span::after {
@@ -62,6 +64,7 @@
     color: $green-accent;
     border-bottom: rem(1) solid $green-accent;
     border-right: rem(1) solid $green-accent;
+    opacity: 1;
 }
 
 .button:hover::after {

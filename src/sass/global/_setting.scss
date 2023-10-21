@@ -14,16 +14,17 @@ $padding-sp: 15px;
 ////////////////////
 
 $base-font: "Gotu", "Noto Sans JP", sans-serif;
-$base-en: 'Lato',"Gotu", sans-serif;
+$font-en: "Lato", "Gotu", sans-serif;
 $font-jp: "Noto Sans JP", sans-serif;
 // ※検証ツールでしっかり反映されているか確認する
 
 body {
     font-family: $base-font;
+    position: relative;
 }
 a:hover {
-  opacity: 0.7;
-  transition: all 0.3;
+    opacity: 0.7;
+    transition: all 0.3;
 }
 
 // フォントウェイト
@@ -38,7 +39,7 @@ $bold: 700;
 //色指定（共通性のあるものは出来る限り指定すると良い）
 $black: #000;
 $white: #fff;
-$green: #0D2936;
-$green2: #DDF0F1;
-$green-accent: #408F95;
-$gray: #D9D9D9;
+$green: #0d2936;
+$green2: #ddf0f1;
+$green-accent: #408f95;
+$gray: #d9d9d9;

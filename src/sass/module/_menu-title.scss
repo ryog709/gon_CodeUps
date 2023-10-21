@@ -10,7 +10,7 @@
 
 .menu-title::before {
     position: absolute;
-    z-index: 9999;
+    z-index: 100;
     content: "";
     width: rem(18);
     height: rem(18);

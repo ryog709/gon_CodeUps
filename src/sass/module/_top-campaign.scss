@@ -1,0 +1,86 @@
+@use "global" as *;
+
+.top-campaign {
+}
+
+.top-campaign-header {
+    display: block;
+    align-items: center;
+}
+
+.top-campaign__title-wrap {
+    text-align: center;
+}
+
+.top-campaign__sub-title {
+    margin-top: rem(12);
+    @include mq("md") {
+        margin-top: rem(16);
+    }
+}
+
+.top-campaign__swiper-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: rem(82);
+    margin-right: 12.5%;
+    margin-top: rem(-45);
+}
+
+.top-campaign__swiper-wrap {
+    padding-left: rem(15);
+    max-width: clamp(rem(1275), calc(rem(1275) + (100vw - rem(1440)) * 0.5), rem(2000));
+    width: 100%;
+    margin-left: auto;
+    margin-right: 0;
+    margin-top: rem(70);
+    @include mq("md") {
+        margin-top: rem(22);
+    }
+}
+
+.top-campaign__swiper-slide {
+    padding: rem(3) 0;
+}
+
+/* Swiperの矢印ボタンのスタイル調整 */
+.swiper-button-prev,
+.swiper-button-next {
+    width: auto; /* Swiperボタンの幅をオートに */
+    height: auto; /* Swiperボタンの高さをオートに */
+    background: none; /* 背景色をなしに */
+    position: static; /* 絶対位置指定をオフに */
+}
+
+/* 前へ次への矢印カスタマイズ */
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    display: none;
+    @include mq("md") {
+        display: block;
+        content: "";
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: rem(80);
+        width: rem(80);
+    }
+}
+
+/* 前への矢印カスタマイズ */
+.swiper-button-prev:after {
+    background-image: url(../images/common/swiper-button-prev.webp);
+}
+/* 次への矢印カスタマイズ */
+.swiper-button-next:after {
+    background-image: url(../images/common/swiper-button-next.webp);
+}
+
+.top-campaign__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: rem(34);
+    @include mq("md") {
+        margin-top: rem(78);
+    }
+}

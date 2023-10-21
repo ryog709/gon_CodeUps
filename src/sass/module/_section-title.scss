@@ -12,8 +12,26 @@
     }
 }
 
+.section-title span {
+    text-transform: lowercase;
+}
+
 .section-title::first-letter {
     color: $green-accent;
 }
 
+.section-title.section-title--white {
+    @include mq("md") {
+        color: $white;
+    }
+}
 
+.section-title.section-title--white::first-letter {
+    @include mq("md") {
+        color: $white;
+    }
+}
+
+.section-title.section-title--large {
+    font-size: rem(80);
+}
