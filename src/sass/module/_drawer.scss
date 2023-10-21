@@ -1,0 +1,19 @@
+@use "global" as *;
+
+.drawer {
+    width: 100%;
+    height: 100vh;
+    background-color: $green-accent;
+    pointer-events: auto;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    padding: rem(14) rem(15) rem(95);
+    display: none;
+}
+
+.header__drawer {
+    position: absolute;
+    top: rem(80);
+    right: 0;
+    left: 0;
+}

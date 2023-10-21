@@ -1,0 +1,113 @@
+@use "global" as *;
+
+.header {
+    background: rgba(13, 41, 54, 0.68);
+    height: rem(80);
+    color: $white;
+    transition: all 0.7s ease 0s;
+    @include mq("md") {
+        height: rem(90);
+    }
+}
+
+.header__inner.inner {
+    height: inherit;
+    padding-right: rem(5);
+}
+
+.header__content {
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    height: inherit;
+    max-width: rem(102);
+    width: 100%;
+    @include mq("md") {
+        max-width: rem(133);
+    }
+}
+
+.header__logo a {
+    height: inherit;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+}
+
+.header__nav {
+    height: inherit;
+}
+
+.header__nav-items {
+    height: inherit;
+    @include mq("md") {
+        display: flex;
+    }
+}
+
+.header__inner.inner {
+    max-width: rem(1410);
+}
+
+.header__nav-item {
+    height: inherit;
+}
+
+.header__nav-item a {
+    padding: 0 clamp(rem(15), calc(rem(10) + (20 - 10) * ((100vw - 768px) / (1440 - 768))), rem(20));
+    height: inherit;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.header__nav-item-en {
+    font-size: rem(18);
+    font-weight: $regular;
+    text-transform: capitalize;
+}
+
+.header__nav-item-jp {
+    font-size: rem(10);
+    font-weight: $regular;
+}
+
+.header__nav-item a {
+    position: relative;
+}
+
+.header__nav-item a::after {
+    content: "";
+    /*絶対配置で線の位置を決める*/
+    position: absolute;
+    bottom: rem(15);
+    left: 10%;
+    /*線の形状*/
+    width: 80%;
+    height: rem(2);
+    background: $white;
+    /*アニメーションの指定*/
+    transition: all 0.3s;
+    transform: scale(0, 1); /*X方向0、Y方向1*/
+    transform-origin: center top; /*上部中央基点*/
+}
+
+.header__nav-item a:hover::after {
+    transform: scale(1, 1); /*X方向にスケール拡大*/
+}
+
+.header.is-current {
+    background-color: $green-accent;
+}
+
+/* スクロールしたらヘッダーメニューのカラー変更 */
+.header.is-headerColorScroll {
+    transition: all 0.5s ease 0s;
+}
