@@ -128,3 +128,11 @@
         top: rem(-41);
     }
 }
+
+@-moz-document url-prefix() {
+    @media (orientation: landscape) and (max-width: 767px) {
+        .top-contact__sea-goldie-image {
+            right: calc(52% - min(44vw, rem(650)));
+        }
+    }
+}

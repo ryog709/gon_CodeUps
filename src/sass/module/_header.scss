@@ -11,8 +11,15 @@
 }
 
 .header__inner.inner {
+    position: relative;
     height: inherit;
     padding-right: rem(5);
+}
+
+.header__hamburger {
+    position: fixed;
+    top: 0;
+    right: 0;
 }
 
 .header__content {
@@ -20,6 +27,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.header__drawer {
+    position: absolute;
+    top: rem(80);
+    right: 0;
+    left: 0;
 }
 
 .header__logo {
