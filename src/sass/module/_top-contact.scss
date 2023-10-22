@@ -121,6 +121,9 @@
     right: calc(52% - min(48vw, rem(650)));
     top: rem(-24);
     background: url(../images/common/contact-sea-goldie.svg) center center / contain no-repeat;
+    @media (orientation: landscape) and (max-width: 767px) {
+        right: calc(52% - min(44vw, rem(650)));
+    }
     @include mq("md") {
         width: rem(301);
         height: rem(138);
@@ -128,11 +131,5 @@
         top: rem(-41);
     }
 }
-
-@-moz-document url-prefix() {
-    @media (orientation: landscape) and (max-width: 767px) {
-        .top-contact__sea-goldie-image {
-            right: calc(52% - min(44vw, rem(650)));
-        }
-    }
-}
+// @-moz-document url-prefix() {
+// }
