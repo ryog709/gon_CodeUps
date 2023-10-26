@@ -10,10 +10,14 @@
     }
 }
 
-.header__inner.inner {
+.header__inner {
     position: relative;
     height: inherit;
-    padding-right: rem(5);
+    padding-left: rem(15);
+    @include mq("md") {
+        padding-left: rem(40);
+        padding-right: rem(20);
+    }
 }
 
 .header__hamburger {
@@ -64,10 +68,6 @@
     }
 }
 
-.header__inner.inner {
-    max-width: rem(1410);
-}
-
 .header__nav-item {
     height: inherit;
 }
@@ -80,9 +80,11 @@
     flex-direction: column;
     justify-content: center;
     color: #ffffff;
+    opacity: 1;
 }
 
 .header__nav-item-en {
+    font-family: $font-en2;
     font-size: rem(18);
     font-weight: $regular;
     text-transform: capitalize;

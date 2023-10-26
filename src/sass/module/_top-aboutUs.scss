@@ -19,9 +19,6 @@
 }
 
 .top-aboutUs__container {
-    max-width: rem(600);
-    width: 100%;
-    margin-inline: auto;
     margin-top: rem(31);
     @include mq("md") {
         max-width: initial;
@@ -90,6 +87,7 @@
     font-weight: $regular;
     color: $green-accent;
     line-height: 1;
+    font-family: $font-en2;
     @include mq("md") {
         font-size: rem(80);
         color: $white;

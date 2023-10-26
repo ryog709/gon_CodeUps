@@ -45,6 +45,7 @@
 }
 
 .footer__copyright {
+    font-family: $font-en2;
     color: $white;
     font-size: rem(12);
     font-weight: $regular;
@@ -53,7 +54,7 @@
     margin-top: rem(19);
     display: block;
     @include mq("md") {
-      margin-top: rem(60);
-      font-size:  rem(14);
+        margin-top: rem(60);
+        font-size: rem(14);
     }
 }

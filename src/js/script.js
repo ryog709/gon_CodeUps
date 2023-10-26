@@ -117,77 +117,29 @@ jQuery(function ($) {
     window.addEventListener("resize", updateSwiper);
 
     // gsapアニメーション
-    const windowWidth = window.innerWidth; // 画面の幅を取得
-    const windowHeight = window.innerHeight; // 画面の高さを取得
-    const startHeight = windowHeight * 1; // 画面の高さの100%を開始位置とする
+    const windowWidth = window.innerWidth;
+    const windowHeight = window.innerHeight;
+    const startHeight = windowHeight;
+
     if (windowWidth > 768) {
-        const openingTL = gsap.timeline();
-        openingTL
-            .to(".js-opening-mv-mask", {
-                duration: 4,
-                autoAlpha: 0,
+        const openingTL = gsap.timeline({
+            defaults: {
+                duration: 3,
                 ease: "power4.inOut",
-            })
+            },
+        });
+
+        openingTL
+            .to(".js-opening-mv-mask", { duration: 4, autoAlpha: 0 })
             .fromTo(
-                ".js-opening-mv-mv-left",
-                {
-                    y: startHeight,
-                },
-                {
-                    y: 0,
-                    duration: 3,
-                    ease: "power4.inOut",
-                },
+                [".js-opening-mv-mv-left", ".js-opening-mv-mv-right"],
+                { y: startHeight },
+                { y: 0, stagger: 0.12 },
                 "-=2.7"
             )
-            .fromTo(
-                ".js-opening-mv-mv-right",
-                {
-                    y: startHeight,
-                },
-                {
-                    y: 0,
-                    duration: 3,
-                    ease: "power4.inOut",
-                },
-                "-=2.8"
-            )
-            .fromTo(
-                ".js-mv-swiper",
-                {
-                    autoAlpha: 0,
-                },
-                {
-                    duration: 3,
-                    autoAlpha: 1,
-                    ease: "power4.inOut",
-                },
-                "-=1.5"
-            )
-            .fromTo(
-                ".js-mv-title-content",
-                {
-                    autoAlpha: 0,
-                },
-                {
-                    duration: 2.5,
-                    autoAlpha: 1,
-                    ease: "power4.inOut",
-                },
-                "-=2.2"
-            )
-            .fromTo(
-                ".js-header",
-                {
-                    y: -90,
-                },
-                {
-                    y: 0,
-                    duration: 0.3,
-                    ease: "power4.inOut", // ここが 'in0ut' になってたから修正したよ
-                },
-                "-=2"
-            );
+            .fromTo(".js-mv-swiper", { autoAlpha: 0 }, { autoAlpha: 1 }, "-=1.5")
+            .fromTo(".js-mv-title-content", { autoAlpha: 0 }, { autoAlpha: 1 }, "-=2.2")
+            .fromTo(".js-header", { y: -90 }, { y: 0, duration: 0.3 }, "-=2");
     }
 
     $(document).ready(function () {

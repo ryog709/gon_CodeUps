@@ -15,14 +15,10 @@
     margin-top: rem(13);
 }
 
-.top-voice__list {
+.top-voice__cards {
     margin-top: rem(24);
-    display: grid;
-    gap: rem(40);
-    grid-template-rows: 1fr;
     @include mq("md") {
         margin-top: rem(40);
-        grid-template-columns: repeat(2, 1fr);
     }
 }
 

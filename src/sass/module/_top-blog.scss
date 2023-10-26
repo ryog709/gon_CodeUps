@@ -25,18 +25,9 @@
     }
 }
 
-.top-blog__list {
-    max-width: rem(600);
-    width: 100%;
-    margin-inline: auto;
+.top-blog__cards {
     margin-top: rem(30);
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    gap: rem(40);
     @include mq("md") {
-        max-width: initial;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 1fr;
         margin-top: rem(80);
     }
 }

@@ -1,6 +1,7 @@
 @use "global" as *;
 
 .section-title {
+    font-family: $font-en2;
     display: block;
     font-size: rem(32);
     font-weight: $regular;

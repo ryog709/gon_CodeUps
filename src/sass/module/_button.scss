@@ -3,7 +3,7 @@
 .button {
     max-width: rem(202);
     width: 100%;
-    font-size:  rem(14);
+    font-size: rem(14);
     padding: rem(16);
     cursor: pointer;
     border: 1px solid $green-accent;
@@ -16,6 +16,7 @@
     align-items: center;
     justify-content: center;
     gap: rem(6);
+    font-family: $font-en2;
 }
 
 .button span {
