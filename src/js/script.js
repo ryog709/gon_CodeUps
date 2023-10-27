@@ -57,11 +57,13 @@ jQuery(function ($) {
                     $(this).removeClass("is-current");
                 });
                 $(".js-hamburger").removeClass("is-current");
+                $("body").toggleClass("active");
             } else {
                 // クラスを追加
                 $(".js-header").addClass("is-current");
                 $(".js-drawer").hide().addClass("is-current").fadeIn(500);
                 $(".js-hamburger").addClass("is-current");
+                $("body").addClass("active");  // ここを変更
             }
         });
     });

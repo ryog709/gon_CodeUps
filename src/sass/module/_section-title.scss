@@ -6,19 +6,15 @@
     font-size: rem(32);
     font-weight: $regular;
     line-height: 1;
-    text-transform: capitalize;
     color: $green;
     @include mq("md") {
         font-size: rem(40);
     }
 }
 
-.section-title span {
-    text-transform: lowercase;
-}
-
 .section-title::first-letter {
     color: $green-accent;
+    text-transform: uppercase;
 }
 
 .section-title.section-title--white {

@@ -23,6 +23,12 @@ body {
     font-family: $font-jp;
 }
 
+/* ハンバーガーメニュー展開時、背景を固定 */
+body.active {
+    height: 100%;
+    overflow: hidden;
+  }
+
 a:hover {
     opacity: 0.7;
     transition: all 0.3s;
