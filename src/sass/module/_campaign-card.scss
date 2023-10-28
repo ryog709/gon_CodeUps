@@ -37,7 +37,7 @@
     font-weight: $regular;
     line-height: 1;
     padding: rem(8) rem(11.5);
-    border: rem(1) solid $green-accent;
+    border: 1px solid $green-accent;
     @include mq("md") {
         padding: rem(10) rem(15);
     }
