@@ -54,7 +54,7 @@
     font-weight: $bold;
     color: $green;
     line-height: 1;
-    border-bottom: rem(1) solid $green-accent;
+    border-bottom: 1px solid $green-accent;
     padding-bottom: rem(4);
     @include mq("md") {
         font-size: rem(24);

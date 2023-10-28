@@ -66,7 +66,7 @@
     color: $green;
     font-weight: $bold;
     line-height: 1;
-    border-bottom: rem(1) solid $green-accent;
+    border-bottom: 1px solid $green-accent;
     padding-bottom: rem(4);
 }
 
@@ -110,7 +110,7 @@
     content: "";
     width: rem(437);
     height: rem(201);
-    left: calc(50% - min(48vw, rem(650)));
+    left: calc(52.5% - min(48vw, rem(650)));
     bottom: rem(-43);
     background: url(../images/common/price-sea-goldie.svg) center center / contain no-repeat;
 }
