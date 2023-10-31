@@ -1,0 +1,21 @@
+@use "global" as *;
+
+.breadcrumb {
+    padding-top: rem(8);
+    font-size: rem(14);
+    color: $green;
+    font-weight: $regular;
+}
+
+.breadcrumb-list-group {
+    display: flex;
+}
+
+.breadcrumb-list-group-item-link[href]:hover {
+    opacity: 0.5;
+}
+
+.breadcrumb-list-group > * + *::before {
+    content: ">";
+    margin-inline: rem(8);
+}
