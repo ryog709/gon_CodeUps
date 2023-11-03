@@ -1,0 +1,33 @@
+@use "global" as *;
+
+.campaign-card-contents {
+}
+
+.campaign-card-contents__inner {
+    max-width: rem(600);
+    width: 100%;
+    padding-inline: rem(47.5);
+    margin-inline: auto;
+    position: relative;
+    @include mq("md") {
+        max-width: $inner + strip-unit($padding-pc) * 2;
+        padding-right: $padding-pc;
+        padding-left: $padding-pc;
+    }
+}
+
+.campaign-card-contents__fish-image {
+    position: absolute;
+    content: "";
+    width: rem(120);
+    height: rem(55);
+    left: calc(52.3% - min(48vw, rem(650)));
+    top: rem(-144);
+    z-index: -1;
+    background: url(../images/common/voice-fish.svg) center center / contain no-repeat;
+    @include mq("md") {
+        width: rem(308);
+        height: rem(138);
+
+    }
+}

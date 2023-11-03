@@ -45,6 +45,10 @@
     color: $white;
     @include mq("md") {
         font-size: rem(80);
+        top: 59%;
     }
 }
 
+.sub-mv__title::first-letter {
+    text-transform: uppercase;
+}

@@ -8,8 +8,10 @@
     color: $green-accent;
     font-weight: $regular;
     line-height: 1;
-    padding: rem(8) rem(11.5);
+    padding: rem(9) rem(11.5);
     border: 1px solid $green-accent;
+    letter-spacing: 0.15em;
+    background-color: $white;
     @include mq("md") {
         padding: rem(10) rem(15);
     }

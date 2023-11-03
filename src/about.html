@@ -212,14 +212,12 @@
                 <div class="sub-mv__inner">
                     <picture class="sub-mv__picture">
                         <source
-                            srcset="./assets/images/campaign/campaign-mv-pc.webp"
+                            srcset="./assets/images/aboutus/aboutus-pc.webp"
                             media="(min-width: 768px)"
                             type="image/webp" />
-                        <img
-                            src="./assets/images/campaign/campaign-mv-sp.webp"
-                            alt="海中を漂う熱帯魚" />
+                        <img src="./assets/images/aboutus/aboutus-sp.webp" alt="海中を漂う熱帯魚" />
                     </picture>
-                    <h1 class="sub-mv__title">campaign</h1>
+                    <h1 class="sub-mv__title">about&nbsp;us</h1>
                 </div>
             </section>
             <!-- breadcrumbs -->
@@ -227,202 +225,75 @@
                 <?php if(function_exists('bcn_display')) { bcn_display(); }?>
             </nav>
 
-            <!-- tag -->
-            <div class="tag layout-tag">
-                <div class="tag__inner inner">
-                    <div class="tag__list tag-list">
-                        <span class="tag-list__item tag-item is-color">ALL</span>
-                        <span class="tag-list__item tag-item">ライセンス講習</span>
-                        <span class="tag-list__item tag-item">ファンダイビング</span>
-                        <span class="tag-list__item tag-item">体験ダイビング</span>
+            <!-- aboutUs -->
+            <article class="aboutUs layout-aboutUs">
+                <div class="aboutUs__inner inner">
+                    <div class="aboutUs__container">
+                        <div class="aboutUs__image-box">
+                            <figure class="aboutUs__image01">
+                                <img
+                                    src="./assets/images/common/aboutus01.webp"
+                                    alt="オレンジ色の屋根に乗っているシーサー"
+                                    width="194"
+                                    height="128"
+                                    loading="lazy" />
+                            </figure>
+                            <figure class="aboutUs__image02">
+                                <img
+                                    src="./assets/images/common/aboutus02.webp"
+                                    alt="青い海の中を漂う黄色のカラフルな熱帯魚"
+                                    width="281"
+                                    height="186"
+                                    loading="lazy" />
+                            </figure>
+                        </div>
+                        <p class="aboutUs__sub-head">
+                            <span>dive</span>
+                            into
+                            <br />
+                            the
+                            <span>ocean</span>
+                        </p>
+                        <p class="aboutUs__text">
+                            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                            <br />
+                            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+                        </p>
                     </div>
+                    <div class="aboutUs__fish-image"></div>
                 </div>
-            </div>
+            </article>
 
-            <!-- campaign-card-contents -->
-            <div class="campaign-card-contents layout-campaign-card-contents">
-                <div class="campaign-card-contents__inner">
-                    <ul class="campaign-card-contents__list campaign-card-list">
-                        <li class="campaign-card-list__item campaign-card">
-                            <a href="#">
-                                <figure class="campaign-card__img">
-                                    <img
-                                        src="./assets/images/common/campaign-card01.webp"
-                                        alt="熱帯魚の群れの写真"
-                                        width="280"
-                                        height="188"
-                                        loading="lazy" />
-                                </figure>
-                                <div class="campaign-card__body">
-                                    <p class="campaign-card__tag"><span>ライセンス講習</span></p>
-                                    <p class="campaign-card__title">ライセンス取得</p>
-                                    <p class="campaign-card__text">全部コミコミ(お一人様)</p>
-                                    <div class="campaign-card__price-wrap">
-                                        <div class="campaign-card__price-sub">
-                                            <span>¥56,000</span>
-                                        </div>
-                                        <div class="campaign-card__price-main">¥46,000</div>
-                                    </div>
-                                    <div class="campaign-card__content-wrap u-desktop">
-                                        <p class="campaign-card__content">
-                                            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
-                                            <br />
-                                            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                                        </p>
-                                        <p class="campaign-card__date">2023/6/1-9/30</p>
-                                        <p class="campaign-card__reserved">
-                                            ご予約・お問い合わせはコチラ
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-                            <div class="campaign-card__button">
-                                <a href="#" class="button">
-                                    Contact us
-                                    <span></span>
-                                </a>
-                            </div>
+            <!-- gallery -->
+            <section class="gallery layout-gallery">
+                <div class="gallery__inner inner">
+                    <div class="top-aboutUs__title-wrap">
+                        <span class="top-aboutUs__title section-title">gallery</span>
+                        <h3 class="top-aboutUs__sub-title section-sub-title">フォト</h3>
+                    </div>
+                    <ul class="gallery__list gallery-list">
+                        <li class="gallery-list__item">
+                            <img src="./assets/images/aboutus/gallery01.webp" alt="熱帯魚と珊瑚礁" />
                         </li>
-                        <li class="campaign-card-list__item campaign-card">
-                            <a href="#">
-                                <figure class="campaign-card__img">
-                                    <img
-                                        src="./assets/images/common/campaign-card02.webp"
-                                        alt="透き通った浅瀬の海と船の風景"
-                                        width="280"
-                                        height="188"
-                                        loading="lazy" />
-                                </figure>
-                                <div class="campaign-card__body">
-                                    <p class="campaign-card__tag">
-                                        <span>体験ダイビング</span>
-                                    </p>
-                                    <p class="campaign-card__title">貸切体験ダイビング</p>
-                                    <p class="campaign-card__text">全部コミコミ(お一人様)</p>
-                                    <div class="campaign-card__price-wrap">
-                                        <div class="campaign-card__price-sub">
-                                            <span>¥24,000</span>
-                                        </div>
-                                        <div class="campaign-card__price-main">¥18,000</div>
-                                    </div>
-                                    <div class="campaign-card__content-wrap u-desktop">
-                                        <p class="campaign-card__content">
-                                            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
-                                            <br />
-                                            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                                        </p>
-                                        <p class="campaign-card__date">2023/6/1-9/30</p>
-                                        <p class="campaign-card__reserved">
-                                            ご予約・お問い合わせはコチラ
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-                            <div class="campaign-card__button">
-                                <a href="#" class="button">
-                                    Contact us
-                                    <span></span>
-                                </a>
-                            </div>
+                        <li class="gallery-list__item">
+                            <img src="./assets/images/aboutus/gallery02.webp" alt="エメラルドグリーンの海" />
                         </li>
-                        <li class="campaign-card-list__item campaign-card">
-                            <a href="#">
-                                <figure class="campaign-card__img">
-                                    <img
-                                        src="./assets/images/common/campaign-card03.webp"
-                                        alt="暗闇の海で青白く光るクラゲの群れ"
-                                        width="280"
-                                        height="188"
-                                        loading="lazy" />
-                                </figure>
-                                <div class="campaign-card__body">
-                                    <p class="campaign-card__tag">
-                                        <span>体験ダイビング</span>
-                                    </p>
-                                    <p class="campaign-card__title">ナイトダイビング</p>
-                                    <p class="campaign-card__text">全部コミコミ(お一人様)</p>
-                                    <div class="campaign-card__price-wrap">
-                                        <div class="campaign-card__price-sub">
-                                            <span>¥10,000</span>
-                                        </div>
-                                        <div class="campaign-card__price-main">¥8,000</div>
-                                    </div>
-                                    <div class="campaign-card__content-wrap u-desktop">
-                                        <p class="campaign-card__content">
-                                            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
-                                            <br />
-                                            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                                        </p>
-                                        <p class="campaign-card__date">2023/6/1-9/30</p>
-                                        <p class="campaign-card__reserved">
-                                            ご予約・お問い合わせはコチラ
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-                            <div class="campaign-card__button">
-                                <a href="#" class="button">
-                                    Contact us
-                                    <span></span>
-                                </a>
-                            </div>
+                        <li class="gallery-list__item">
+                            <img src="./assets/images/aboutus/gallery03.webp" alt="熱帯魚" />
                         </li>
-                        <li class="campaign-card-list__item campaign-card">
-                            <a href="#">
-                                <figure class="campaign-card__img">
-                                    <img
-                                        src="./assets/images/common/campaign-card04.webp"
-                                        alt="海面で潜り込む前のダイバー達の写真"
-                                        width="280"
-                                        height="188"
-                                        loading="lazy" />
-                                </figure>
-                                <div class="campaign-card__body">
-                                    <p class="campaign-card__tag">
-                                        <span>ファンダイビング</span>
-                                    </p>
-                                    <p class="campaign-card__title">貸切ファンダイビング</p>
-                                    <p class="campaign-card__text">全部コミコミ(お一人様)</p>
-                                    <div class="campaign-card__price-wrap">
-                                        <div class="campaign-card__price-sub">
-                                            <span>¥20,000</span>
-                                        </div>
-                                        <div class="campaign-card__price-main">¥16,000</div>
-                                    </div>
-                                    <div class="campaign-card__content-wrap u-desktop">
-                                        <p class="campaign-card__content">
-                                            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
-                                            <br />
-                                            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                                        </p>
-                                        <p class="campaign-card__date">2023/6/1-9/30</p>
-                                        <p class="campaign-card__reserved">
-                                            ご予約・お問い合わせはコチラ
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-                            <div class="campaign-card__button">
-                                <a href="#" class="button">
-                                    Contact us
-                                    <span></span>
-                                </a>
-                            </div>
+                        <li class="gallery-list__item">
+                            <img src="./assets/images/aboutus/gallery04.webp" alt="熱帯魚" />
+                        </li>
+                        <li class="gallery-list__item">
+                            <img src="./assets/images/aboutus/gallery05.webp" alt="熱帯魚の群れ" />
+                        </li>
+                        <li class="gallery-list__item">
+                            <img src="./assets/images/aboutus/gallery06.webp" alt="珊瑚と熱帯魚" />
                         </li>
                     </ul>
-                    <div class="campaign-card-contents__fish-image"></div>
+                    <div class="gallery__sea-goldie-image"></div>
                 </div>
-            </div>
-            <div class="wp-pagenavi layout-wp-pagenavi">
-                <a class="previouspostslink" rel="prev" href="#">&lt;</a>
-                <span class="current">1</span>
-                <a class="page smaller" href="#">2</a>
-                <a class="page smaller" href="#">3</a>
-                <a class="page smaller" href="#">4</a>
-                <a class="page smaller u-desktop" href="#">5</a>
-                <a class="page larger u-desktop" href="#">6</a>
-                <a class="nextpostslink" rel="next" href="#">&gt;</a>
-            </div>
+            </section>
 
             <!-- contact -->
             <section class="contact layout-contact">

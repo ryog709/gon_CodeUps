@@ -1,21 +1,22 @@
 @use "global" as *;
 
-.breadcrumb {
-    padding-top: rem(8);
-    font-size: rem(14);
-    color: $green;
-    font-weight: $regular;
-}
+// .breadcrumbs {
+//     padding-top: rem(8);
+//     font-size: rem(14);
+//     color: $green;
+//     font-weight: $regular;
+// }
 
-.breadcrumb-list-group {
-    display: flex;
-}
+// .breadcrumbs-list-group {
+//     display: flex;
+// }
 
-.breadcrumb-list-group-item-link[href]:hover {
-    opacity: 0.5;
-}
+// .breadcrumbs-list-group-item-link[href]:hover {
+//     opacity: 0.5;
+// }
 
-.breadcrumb-list-group > * + *::before {
-    content: ">";
-    margin-inline: rem(8);
-}
+// .breadcrumbs-list-group > * + *::before {
+//     content: ">";
+//     margin-left: rem(8);
+//     margin-right: rem(2);
+// }

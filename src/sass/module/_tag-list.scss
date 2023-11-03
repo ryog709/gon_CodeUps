@@ -2,8 +2,13 @@
 
 .tag-list {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 21px;
-    grid-row-gap: 16px;
+	grid-template-columns: repeat(auto-fill, minmax( rem(162), 1fr));
+    grid-column-gap: rem(20);
+    grid-row-gap: rem(18);
+    position: relative;
+    @include mq("md") {
+        grid-column-gap: rem(32);
+        grid-template-columns: repeat(auto-fill, minmax( rem(162), max-content));
+
+    }
 }
