@@ -7,6 +7,18 @@
     position: relative;
 }
 
+.top-aboutUs__inner::after {
+    @include mq("md") {
+        position: absolute;
+        content: "";
+        background: url(../images/common/coral.svg) center center / contain no-repeat;
+        width: rem(194);
+        height: rem(181);
+        bottom: rem(-89);
+        right: calc(51% - min(48vw, rem(650)));
+    }
+}
+
 .top-aboutUs__title-wrap {
     text-align: center;
 }
@@ -119,17 +131,5 @@
 
 .top-aboutUs__button {
     margin-top: rem(40);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.top-aboutUs__coral-image {
-    position: absolute;
-    content: "";
-    background: url(../images/common/coral.svg) center center / contain no-repeat;
-    width: rem(194);
-    height: rem(181);
-    bottom: rem(-89);
-    right: calc(51% - min(48vw, rem(650)));
+    text-align: center;
 }

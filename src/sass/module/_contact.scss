@@ -7,6 +7,27 @@
     position: relative;
 }
 
+.contact__inner::after {
+    position: absolute;
+    content: "";
+    width: rem(109);
+    height: rem(50);
+    right: calc(52% - min(48vw, rem(650)));
+    top: rem(-24);
+    background: url(../images/common/contact-sea-goldie.svg) center center / contain no-repeat;
+    @media (orientation: landscape) and (max-width: 767px) {
+        // @-moz-document url-prefix() {
+        // }
+        right: calc(52% - min(44vw, rem(650)));
+    }
+    @include mq("md") {
+        width: rem(301);
+        height: rem(138);
+        right: calc(48% - min(46vw, rem(650)));
+        top: rem(-41);
+    }
+}
+
 .contact__container {
     @include mq("md") {
         background: $white;
@@ -99,30 +120,9 @@
 }
 
 .contact__button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
     margin-top: rem(40);
 }
 
 .contact__sea-goldie-image {
-    position: absolute;
-    content: "";
-    width: rem(109);
-    height: rem(50);
-    right: calc(52% - min(48vw, rem(650)));
-    top: rem(-24);
-    background: url(../images/common/contact-sea-goldie.svg) center center / contain no-repeat;
-    @media (orientation: landscape) and (max-width: 767px) {
-        right: calc(52% - min(44vw, rem(650)));
-    }
-    @include mq("md") {
-        width: rem(301);
-        height: rem(138);
-        right: calc(48% - min(48vw, rem(650)));
-        top: rem(-41);
-    }
 }
-
-// @-moz-document url-prefix() {
-// }

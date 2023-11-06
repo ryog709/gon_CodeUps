@@ -3,6 +3,10 @@
 .gallery {
 }
 
+.gallery__inner {
+	position: relative;
+}
+
 .gallery__list {
     margin-top: rem(40);
     @include mq("md") {

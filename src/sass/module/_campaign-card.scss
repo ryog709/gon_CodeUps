@@ -161,9 +161,7 @@
 .campaign-card__button {
     display: none;
     @include mq("md") {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        text-align: center;
         margin-top: rem(18);
     }
 }

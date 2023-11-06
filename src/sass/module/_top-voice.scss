@@ -7,6 +7,30 @@
     position: relative;
 }
 
+.top-voice__inner::before {
+    @include mq("md") {
+        position: absolute;
+        content: "";
+        width: rem(308);
+        height: rem(138);
+        left: calc(52% - min(48vw, rem(650)));
+        top: rem(-118);
+        background: url(../images/common/voice-fish.svg) center center / contain no-repeat;
+    }
+}
+
+.top-voice__inner::after {
+    @include mq("md") {
+        position: absolute;
+        content: "";
+        width: rem(71);
+        height: rem(162);
+        right: rem(25);
+        bottom: rem(-70);
+        background: url(../images/common/voice-seahorse.svg) center center / contain no-repeat;
+    }
+}
+
 .top-voice__title-wrap {
     text-align: center;
 }
@@ -23,31 +47,10 @@
 }
 
 .top-voice__button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
     margin-top: rem(40);
     @include mq("md") {
         margin-top: rem(80);
     }
 }
 
-.top-voice__fish-image {
-    position: absolute;
-    content: "";
-    width: rem(308);
-    height: rem(138);
-    left: calc(52% - min(48vw, rem(650)));
-    top: rem(-118);
-    background: url(../images/common/voice-fish.svg) center center / contain no-repeat;
-}
-
-.top-voice__seahorse-image {
-    position: absolute;
-    content: "";
-    width: rem(71);
-    height: rem(162);
-    right: rem(25);
-    bottom: rem(-70);
-    background: url(../images/common/voice-seahorse.svg) center center / contain no-repeat;
-}

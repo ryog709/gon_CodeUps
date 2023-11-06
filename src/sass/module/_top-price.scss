@@ -14,6 +14,18 @@
     position: relative;
 }
 
+.top-price__inner::after {
+    @include mq("md") {
+        position: absolute;
+        content: "";
+        width: rem(437);
+        height: rem(201);
+        left: calc(52.5% - min(50vw, rem(650)));
+        bottom: rem(-43);
+        background: url(../images/common/price-sea-goldie.svg) center center / contain no-repeat;
+    }
+}
+
 .top-price__title-wrap {
     text-align: center;
 }
@@ -72,7 +84,6 @@
 
 .top-price__list {
     font-size: rem(14);
-    // font-family: $font-jp;
     color: $green;
     font-weight: $regular;
     line-height: calc(24 / 14);
@@ -96,21 +107,9 @@
 }
 
 .top-price__button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
     margin-top: rem(40);
     @include mq("md") {
         margin-top: rem(80);
     }
-}
-
-.top-price__sea-goldie-image {
-    position: absolute;
-    content: "";
-    width: rem(437);
-    height: rem(201);
-    left: calc(52.5% - min(48vw, rem(650)));
-    bottom: rem(-43);
-    background: url(../images/common/price-sea-goldie.svg) center center / contain no-repeat;
 }

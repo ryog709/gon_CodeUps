@@ -6,7 +6,7 @@
         <meta name="format-detection" content="telephone=no" />
         <meta name="robots" content="noindex" />
         <!-- meta情報 -->
-        <title>campaign - CodeUps</title>
+        <title>information - CodeUps</title>
         <meta name="description" content="" />
         <meta name="keywords" content="" />
         <!-- ogp -->
@@ -212,14 +212,14 @@
                 <div class="sub-mv__inner">
                     <picture class="sub-mv__picture">
                         <source
-                            srcset="./assets/images/campaign/campaign-mv-pc.webp"
+                            srcset="./assets/images/information/information-pc.webp"
                             media="(min-width: 768px)"
                             type="image/webp" />
                         <img
-                            src="./assets/images/campaign/campaign-mv-sp.webp"
+                            src="./assets/images/information/information-sp.webp"
                             alt="海中を漂う熱帯魚" />
                     </picture>
-                    <h1 class="sub-mv__title">campaign</h1>
+                    <h1 class="sub-mv__title">information</h1>
                 </div>
             </section>
             <!-- breadcrumbs -->
@@ -227,202 +227,90 @@
                 <?php if(function_exists('bcn_display')) { bcn_display(); }?>
             </nav>
 
-            <!-- tag -->
-            <div class="tag layout-tag">
-                <div class="tag__inner inner">
-                    <div class="tag__list tag-list">
-                        <span class="tag-list__item tag-item is-color">ALL</span>
-                        <span class="tag-list__item tag-item">ライセンス講習</span>
-                        <span class="tag-list__item tag-item">ファンダイビング</span>
-                        <span class="tag-list__item tag-item">体験ダイビング</span>
+            <!-- information -->
+            <section class="information layout-information">
+                <div class="information__inner inner">
+                    <div class="information__tab information-tab">
+                        <ul class="information-tab__menu">
+                            <li
+                                class="information-tab__menu-item js-tab-menu is-active"
+                                data-number="tab01">
+                                ライセンス
+                                <br class="u-mobile" />
+                                講習
+                            </li>
+                            <li class="information-tab__menu-item js-tab-menu" data-number="tab02">
+                                ファン
+                                <br class="u-mobile" />
+                                ダイビング
+                            </li>
+                            <li class="information-tab__menu-item js-tab-menu" data-number="tab03">
+                                体験
+                                <br class="u-mobile" />
+                                ダイビング
+                            </li>
+                        </ul>
+                        <ul class="information-tab__list">
+                            <li
+                                id="tab01"
+                                class="information-tab__list-item js-tab-content is-active">
+                                <div class="information-tab__wrap">
+                                    <div class="information-tab__content">
+                                        <h2 class="information-tab__head">ライセンス講習</h2>
+                                        <p class="information-tab__text">
+                                            泳げない人も、ちょっと水が苦手な人も、ダイビングを「安全に」楽しんでいただけるよう、スタッフがサポートいたします!スキューバダイビングを楽しむためには最低限の知識とスキルが要求されます。知識やスキルと言ってもそんなに難しい事ではなく、安全に楽しむ事を目的としたものです。プロダイバーの指導のもと知識とスキルを習得しCカードを取得して、ダイバーになろう!
+                                        </p>
+                                    </div>
+                                    <div class="information-tab__image">
+                                        <img
+                                            src="./assets/images/information/information01.jpg"
+                                            alt="ダイビング講習の様子"
+                                            width="297"
+                                            height="189"
+                                            loading="lazy" />
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="tab02" class="information-tab__list-item js-tab-content">
+                                <div class="information-tab__wrap">
+                                    <div class="information-tab__content">
+                                        <h2 class="information-tab__head">ファンダイビング</h2>
+                                        <p class="information-tab__text">
+                                            ブランクダイバー、ライセンスを取り立ての方も安心！沖縄本島を代表する「青の洞窟」（真栄田岬）やケラマ諸島などメジャーなポイントはモチロンのこと、最北端「辺戸岬」や最南端の「大渡海岸」等もご用意！
+                                        </p>
+                                    </div>
+                                    <div class="information-tab__image">
+                                        <img
+                                            src="./assets/images/information/information02.jpg"
+                                            alt="ダイビング講習の様子"
+                                            width="297"
+                                            height="189"
+                                            loading="lazy" />
+                                    </div>
+                                </div>
+                            </li>
+                            <li id="tab03" class="information-tab__list-item js-tab-content">
+                                <div class="information-tab__wrap">
+                                    <div class="information-tab__content">
+                                        <h2 class="information-tab__head">体験ダイビング</h2>
+                                        <p class="information-tab__text">
+                                            ブランクダイバー、ライセンスを取り立ての方も安心！沖縄本島を代表する「青の洞窟」（真栄田岬）やケラマ諸島などメジャーなポイントはモチロンのこと、最北端「辺戸岬」や最南端の「大渡海岸」等もご用意！
+                                        </p>
+                                    </div>
+                                    <div class="information-tab__image">
+                                        <img
+                                            src="./assets/images/information/information03.jpg"
+                                            alt="ダイビング講習の様子"
+                                            width="297"
+                                            height="189"
+                                            loading="lazy" />
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            </div>
-
-            <!-- campaign-card-contents -->
-            <div class="campaign-card-contents layout-campaign-card-contents">
-                <div class="campaign-card-contents__inner">
-                    <ul class="campaign-card-contents__list campaign-card-list">
-                        <li class="campaign-card-list__item campaign-card">
-                            <a href="#">
-                                <figure class="campaign-card__img">
-                                    <img
-                                        src="./assets/images/common/campaign-card01.webp"
-                                        alt="熱帯魚の群れの写真"
-                                        width="280"
-                                        height="188"
-                                        loading="lazy" />
-                                </figure>
-                                <div class="campaign-card__body">
-                                    <p class="campaign-card__tag"><span>ライセンス講習</span></p>
-                                    <p class="campaign-card__title">ライセンス取得</p>
-                                    <p class="campaign-card__text">全部コミコミ(お一人様)</p>
-                                    <div class="campaign-card__price-wrap">
-                                        <div class="campaign-card__price-sub">
-                                            <span>¥56,000</span>
-                                        </div>
-                                        <div class="campaign-card__price-main">¥46,000</div>
-                                    </div>
-                                    <div class="campaign-card__content-wrap u-desktop">
-                                        <p class="campaign-card__content">
-                                            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
-                                            <br />
-                                            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                                        </p>
-                                        <p class="campaign-card__date">2023/6/1-9/30</p>
-                                        <p class="campaign-card__reserved">
-                                            ご予約・お問い合わせはコチラ
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-                            <div class="campaign-card__button">
-                                <a href="#" class="button">
-                                    Contact us
-                                    <span></span>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="campaign-card-list__item campaign-card">
-                            <a href="#">
-                                <figure class="campaign-card__img">
-                                    <img
-                                        src="./assets/images/common/campaign-card02.webp"
-                                        alt="透き通った浅瀬の海と船の風景"
-                                        width="280"
-                                        height="188"
-                                        loading="lazy" />
-                                </figure>
-                                <div class="campaign-card__body">
-                                    <p class="campaign-card__tag">
-                                        <span>体験ダイビング</span>
-                                    </p>
-                                    <p class="campaign-card__title">貸切体験ダイビング</p>
-                                    <p class="campaign-card__text">全部コミコミ(お一人様)</p>
-                                    <div class="campaign-card__price-wrap">
-                                        <div class="campaign-card__price-sub">
-                                            <span>¥24,000</span>
-                                        </div>
-                                        <div class="campaign-card__price-main">¥18,000</div>
-                                    </div>
-                                    <div class="campaign-card__content-wrap u-desktop">
-                                        <p class="campaign-card__content">
-                                            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
-                                            <br />
-                                            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                                        </p>
-                                        <p class="campaign-card__date">2023/6/1-9/30</p>
-                                        <p class="campaign-card__reserved">
-                                            ご予約・お問い合わせはコチラ
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-                            <div class="campaign-card__button">
-                                <a href="#" class="button">
-                                    Contact us
-                                    <span></span>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="campaign-card-list__item campaign-card">
-                            <a href="#">
-                                <figure class="campaign-card__img">
-                                    <img
-                                        src="./assets/images/common/campaign-card03.webp"
-                                        alt="暗闇の海で青白く光るクラゲの群れ"
-                                        width="280"
-                                        height="188"
-                                        loading="lazy" />
-                                </figure>
-                                <div class="campaign-card__body">
-                                    <p class="campaign-card__tag">
-                                        <span>体験ダイビング</span>
-                                    </p>
-                                    <p class="campaign-card__title">ナイトダイビング</p>
-                                    <p class="campaign-card__text">全部コミコミ(お一人様)</p>
-                                    <div class="campaign-card__price-wrap">
-                                        <div class="campaign-card__price-sub">
-                                            <span>¥10,000</span>
-                                        </div>
-                                        <div class="campaign-card__price-main">¥8,000</div>
-                                    </div>
-                                    <div class="campaign-card__content-wrap u-desktop">
-                                        <p class="campaign-card__content">
-                                            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
-                                            <br />
-                                            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                                        </p>
-                                        <p class="campaign-card__date">2023/6/1-9/30</p>
-                                        <p class="campaign-card__reserved">
-                                            ご予約・お問い合わせはコチラ
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-                            <div class="campaign-card__button">
-                                <a href="#" class="button">
-                                    Contact us
-                                    <span></span>
-                                </a>
-                            </div>
-                        </li>
-                        <li class="campaign-card-list__item campaign-card">
-                            <a href="#">
-                                <figure class="campaign-card__img">
-                                    <img
-                                        src="./assets/images/common/campaign-card04.webp"
-                                        alt="海面で潜り込む前のダイバー達の写真"
-                                        width="280"
-                                        height="188"
-                                        loading="lazy" />
-                                </figure>
-                                <div class="campaign-card__body">
-                                    <p class="campaign-card__tag">
-                                        <span>ファンダイビング</span>
-                                    </p>
-                                    <p class="campaign-card__title">貸切ファンダイビング</p>
-                                    <p class="campaign-card__text">全部コミコミ(お一人様)</p>
-                                    <div class="campaign-card__price-wrap">
-                                        <div class="campaign-card__price-sub">
-                                            <span>¥20,000</span>
-                                        </div>
-                                        <div class="campaign-card__price-main">¥16,000</div>
-                                    </div>
-                                    <div class="campaign-card__content-wrap u-desktop">
-                                        <p class="campaign-card__content">
-                                            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
-                                            <br />
-                                            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト
-                                        </p>
-                                        <p class="campaign-card__date">2023/6/1-9/30</p>
-                                        <p class="campaign-card__reserved">
-                                            ご予約・お問い合わせはコチラ
-                                        </p>
-                                    </div>
-                                </div>
-                            </a>
-                            <div class="campaign-card__button">
-                                <a href="#" class="button">
-                                    Contact us
-                                    <span></span>
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="campaign-card-contents__fish-image"></div>
-                </div>
-            </div>
-            <div class="wp-pagenavi layout-wp-pagenavi">
-                <a class="previouspostslink" rel="prev" href="#">&lt;</a>
-                <span class="current">1</span>
-                <a class="page smaller" href="#">2</a>
-                <a class="page smaller" href="#">3</a>
-                <a class="page smaller" href="#">4</a>
-                <a class="page smaller u-desktop" href="#">5</a>
-                <a class="page larger u-desktop" href="#">6</a>
-                <a class="nextpostslink" rel="next" href="#">&gt;</a>
-            </div>
+            </section>
 
             <!-- contact -->
             <section class="contact layout-contact">
@@ -459,7 +347,7 @@
                                 <span class="contact__title section-title section-title--large">
                                     contact
                                 </span>
-                                <h3 class="contact__sub-title section-sub-title">お問い合わせ</h3>
+                                <h2 class="contact__sub-title section-sub-title">お問い合わせ</h2>
                                 <p class="contact__info">ご予約・お問い合わせはコチラ</p>
                             </div>
                             <div class="contact__button">

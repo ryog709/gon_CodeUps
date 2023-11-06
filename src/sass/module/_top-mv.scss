@@ -45,14 +45,20 @@
 .top-mv__title-content {
     color: $white;
     position: absolute;
-    top: 50%;
+    top: 49%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -42%);
     width: 100%;
     text-align: center;
     z-index: 100;
     width: fit-content;
     line-height: 1;
+    @include mq("md") {
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -45%);
+
+    }
 }
 
 .top-mv__title {
@@ -61,6 +67,7 @@
     letter-spacing: 0.54em;
     font-family: $font-en;
     text-transform: uppercase;
+    text-indent: 0.54em;
     @include mq("md") {
         font-size: rem(80);
     }

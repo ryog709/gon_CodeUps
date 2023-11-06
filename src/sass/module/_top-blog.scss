@@ -15,6 +15,18 @@
     position: relative;
 }
 
+.top-blog__inner::after {
+    @include mq("md") {
+        position: absolute;
+        content: "";
+        width: rem(431);
+        height: rem(200);
+        left: calc(53% - min(48vw, rem(650)));
+        top: rem(-75);
+        background: url(../images/common/blog-fish.svg) center center / contain no-repeat;
+    }
+}
+
 .top-blog__title-wrap {
     text-align: center;
 }
@@ -33,21 +45,11 @@
 }
 
 .top-blog__button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
     margin-top: rem(37);
     @include mq("md") {
         margin-top: rem(80);
     }
 }
 
-.top-blog__fish-image {
-    position: absolute;
-    content: "";
-    width: rem(431);
-    height: rem(200);
-    left: calc(53% - min(48vw, rem(650)));
-    top: rem(-75);
-    background: url(../images/common/blog-fish.svg) center center / contain no-repeat;
-}
+

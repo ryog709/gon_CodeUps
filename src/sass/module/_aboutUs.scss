@@ -10,9 +10,9 @@
 .aboutUs__container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: 1fr auto;
     grid-column-gap: 0px;
-    grid-row-gap: 40px;
+    grid-row-gap:  rem(40);
     @include mq("md") {
         max-width: initial;
         display: grid;

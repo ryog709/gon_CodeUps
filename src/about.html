@@ -6,7 +6,7 @@
         <meta name="format-detection" content="telephone=no" />
         <meta name="robots" content="noindex" />
         <!-- meta情報 -->
-        <title>campaign - CodeUps</title>
+        <title>about - CodeUps</title>
         <meta name="description" content="" />
         <meta name="keywords" content="" />
         <!-- ogp -->
@@ -197,7 +197,7 @@
                                 </ul>
                                 <ul class="drawer-menu__items">
                                     <li class="drawer-menu__item-head menu-title">
-                                        <a href="#">お問いわ合せ</a>
+                                        <a href="#">お問い合わせ</a>
                                     </li>
                                 </ul>
                             </div>
@@ -269,29 +269,93 @@
                 <div class="gallery__inner inner">
                     <div class="top-aboutUs__title-wrap">
                         <span class="top-aboutUs__title section-title">gallery</span>
-                        <h3 class="top-aboutUs__sub-title section-sub-title">フォト</h3>
+                        <h2 class="top-aboutUs__sub-title section-sub-title">フォト</h2>
                     </div>
                     <ul class="gallery__list gallery-list">
-                        <li class="gallery-list__item">
-                            <img src="./assets/images/aboutus/gallery01.webp" alt="熱帯魚と珊瑚礁" />
+                        <li class="gallery-list__item js-modal-open" data-target="1">
+                            <img
+                                src="./assets/images/aboutus/gallery01.webp"
+                                alt="熱帯魚と珊瑚礁" />
                         </li>
-                        <li class="gallery-list__item">
-                            <img src="./assets/images/aboutus/gallery02.webp" alt="エメラルドグリーンの海" />
+                        <li class="gallery-list__item js-modal-open" data-target="2">
+                            <img
+                                src="./assets/images/aboutus/gallery02.webp"
+                                alt="エメラルドグリーンの海" />
                         </li>
-                        <li class="gallery-list__item">
+                        <li class="gallery-list__item js-modal-open" data-target="3">
                             <img src="./assets/images/aboutus/gallery03.webp" alt="熱帯魚" />
                         </li>
-                        <li class="gallery-list__item">
+                        <li class="gallery-list__item js-modal-open" data-target="4">
                             <img src="./assets/images/aboutus/gallery04.webp" alt="熱帯魚" />
                         </li>
-                        <li class="gallery-list__item">
+                        <li class="gallery-list__item js-modal-open" data-target="5">
                             <img src="./assets/images/aboutus/gallery05.webp" alt="熱帯魚の群れ" />
                         </li>
-                        <li class="gallery-list__item">
+                        <li class="gallery-list__item js-modal-open" data-target="6">
                             <img src="./assets/images/aboutus/gallery06.webp" alt="珊瑚と熱帯魚" />
                         </li>
                     </ul>
-                    <div class="gallery__sea-goldie-image"></div>
+                    <div class="gallery__sea-goldie-image u-desktop"></div>
+
+                    <!-- modal -->
+                    <div class="gallery__modal gallery-modal">
+                        <ul class="gallery-modal__list gallery-modal-list">
+                            <li class="gallery-modal-list__item modal js-modal" id="1">
+                                <div class="modal__inner">
+                                    <div class="modal__img">
+                                        <img
+                                            src="./assets/images/aboutus/gallery01.webp"
+                                            alt="省略" />
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="gallery-modal-list__item modal js-modal" id="2">
+                                <div class="modal__inner">
+                                    <div class="modal__img">
+                                        <img
+                                            src="./assets/images/aboutus/gallery02.webp"
+                                            alt="省略" />
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="gallery-modal-list__item modal js-modal" id="3">
+                                <div class="modal__inner">
+                                    <div class="modal__img">
+                                        <img
+                                            src="./assets/images/aboutus/gallery03.webp"
+                                            alt="省略" />
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="gallery-modal-list__item modal js-modal" id="4">
+                                <div class="modal__inner">
+                                    <div class="modal__img">
+                                        <img
+                                            src="./assets/images/aboutus/gallery04.webp"
+                                            alt="省略" />
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="gallery-modal-list__item modal js-modal" id="5">
+                                <div class="modal__inner">
+                                    <div class="modal__img">
+                                        <img
+                                            src="./assets/images/aboutus/gallery05.webp"
+                                            alt="省略" />
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="gallery-modal-list__item modal js-modal" id="6">
+                                <div class="modal__inner">
+                                    <div class="modal__img">
+                                        <img
+                                            src="./assets/images/aboutus/gallery06.webp"
+                                            alt="省略" />
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </section>
 
@@ -330,7 +394,7 @@
                                 <span class="contact__title section-title section-title--large">
                                     contact
                                 </span>
-                                <h3 class="contact__sub-title section-sub-title">お問い合わせ</h3>
+                                <h2 class="contact__sub-title section-sub-title">お問い合わせ</h2>
                                 <p class="contact__info">ご予約・お問い合わせはコチラ</p>
                             </div>
                             <div class="contact__button">
@@ -457,7 +521,7 @@
                             </ul>
                             <ul class="footer-menu__items">
                                 <li class="footer-menu__item-head menu-title">
-                                    <a href="#">お問いわ合せ</a>
+                                    <a href="#">お問い合わせ</a>
                                 </li>
                             </ul>
                         </div>
