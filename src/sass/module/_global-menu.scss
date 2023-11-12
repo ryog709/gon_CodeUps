@@ -33,6 +33,10 @@
     }
 }
 
+.global-menu__right.global-menu__right--space {
+    margin-left: rem(20);
+}
+
 .global-menu__left .global-menu__wrap:nth-child(2) {
     @include mq("md") {
         margin-left: rem(27);
