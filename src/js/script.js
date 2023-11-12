@@ -81,7 +81,7 @@ jQuery(function ($) {
     //画面幅に応じたカード型レイアウトスライダー
     if (document.querySelector(".js-card-swiper")) {
         const cardSwiper = new Swiper(".js-card-swiper", {
-            // autoplay: true,
+            autoplay: true,
             speed: 2000,
             loop: true,
             navigation: {
