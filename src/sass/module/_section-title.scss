@@ -6,7 +6,6 @@
     font-size: rem(32);
     font-weight: $regular;
     line-height: 1;
-    color: $green;
     @include mq("md") {
         font-size: rem(40);
     }

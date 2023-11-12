@@ -14,16 +14,16 @@ jQuery(function ($) {
         // ボタン位置の調整
         let cssSettings =
             scrollHeight - scrollPosition <= footHeight
-                ? {
-                      position: "absolute",
-                      bottom: footHeight + "px",
-                      top: "auto",
-                  }
-                : {
-                      position: "fixed",
-                      bottom: "0px",
-                      top: "auto",
-                  };
+            ? {
+                position: "absolute",
+                bottom: footHeight + "px",
+                top: "auto",
+            }
+            : {
+                position: "fixed",
+                bottom: "0px",
+                top: "auto",
+                };
         $(".js-page-top").css(cssSettings);
         // ボタンの表示・非表示
         if (scrollPositionFromTop > 200) {
@@ -36,32 +36,32 @@ jQuery(function ($) {
     //ドロワーメニュー
     $(window).resize(function () {
         if ($(window).width() >= 768) {
-            if ($(".js-drawer").hasClass("is-current")) {
+            if ($(".js-drawer").hasClass("is-open")) {
                 $(".js-drawer").fadeOut(500, function () {
-                    $(this).removeClass("is-current");
+                    $(this).removeClass("is-open");
                 });
-                $(".js-hamburger").removeClass("is-current");
-                $(".js-header").removeClass("is-current");
+                $(".js-hamburger").removeClass("is-open");
+                $(".js-header").removeClass("is-open");
             }
         }
     });
     // ハンバーガーメニュー
     $(function () {
         $(".js-hamburger,.js-drawer,.js-drawer a").click(function () {
-            if ($(".js-drawer").hasClass("is-current")) {
+            if ($(".js-drawer").hasClass("is-open")) {
                 // クラスを削除
-                $(".js-header").removeClass("is-current");
+                $(".js-header").removeClass("is-open");
                 $(".js-drawer").fadeOut(500, function () {
-                    $(this).removeClass("is-current");
+                    $(this).removeClass("is-open");
                 });
-                $(".js-hamburger").removeClass("is-current");
-                $("body").toggleClass("is-current");
+                $(".js-hamburger").removeClass("is-open");
+                $("body").toggleClass("is-open");
             } else {
                 // クラスを追加
-                $(".js-header").addClass("is-current");
-                $(".js-drawer").hide().addClass("is-current").fadeIn(500);
-                $(".js-hamburger").addClass("is-current");
-                $("body").addClass("is-current"); // ここを変更
+                $(".js-header").addClass("is-open");
+                $(".js-drawer").hide().addClass("is-open").fadeIn(500);
+                $(".js-hamburger").addClass("is-open");
+                $("body").addClass("is-open");
             }
         });
     });
@@ -81,7 +81,7 @@ jQuery(function ($) {
     //画面幅に応じたカード型レイアウトスライダー
     if (document.querySelector(".js-card-swiper")) {
         const cardSwiper = new Swiper(".js-card-swiper", {
-            autoplay: true,
+            // autoplay: true,
             speed: 2000,
             loop: true,
             navigation: {
@@ -121,37 +121,42 @@ jQuery(function ($) {
     // gsapオープニングアニメーション
     // ページが読み込まれたときにヘッダーを非表示にする
     if ($(".js-opening-mv-mask").length) {
-    gsap.set(".js-header", { autoAlpha: 0 });
-    const windowWidth = window.innerWidth;
-    const windowHeight = window.innerHeight;
-    const startHeight = windowHeight;
-    const openingTL = gsap.timeline({
-        defaults: {
-            duration: 3,
-            ease: "power4.inOut",
-        },
-    });
-    // 768px以上のときのアニメーション
-    if (windowWidth > 768) {
-        openingTL
-            .to(".js-opening-mv-mask", { duration: 4, autoAlpha: 0 })
-            .fromTo(
-                [".js-opening-mv-mv-left", ".js-opening-mv-mv-right"],
-                { y: startHeight },
-                { y: 0, stagger: 0.12 },
-                "-=2.7"
-            )
-            .fromTo(".js-mv-swiper", { autoAlpha: 0 }, { autoAlpha: 1 }, "-=1.5")
-            .fromTo(".js-mv-title-content", { autoAlpha: 0 }, { autoAlpha: 1 }, "-=2.2")
-            .fromTo(".js-header", { y: -90, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.3 }, "-=2");
+        gsap.set(".js-header", { autoAlpha: 0 });
+        const windowWidth = window.innerWidth;
+        const windowHeight = window.innerHeight;
+        const startHeight = windowHeight;
+        const openingTL = gsap.timeline({
+            defaults: {
+                duration: 3,
+                ease: "power4.inOut",
+            },
+        });
+        // 768px以上のときのアニメーション
+        if (windowWidth > 768) {
+            openingTL
+                .to(".js-opening-mv-mask", { duration: 4, autoAlpha: 0 })
+                .fromTo(
+                    [".js-opening-mv-mv-left", ".js-opening-mv-mv-right"],
+                    { y: startHeight },
+                    { y: 0, stagger: 0.12 },
+                    "-=2.7"
+                )
+                .fromTo(".js-mv-swiper", { autoAlpha: 0 }, { autoAlpha: 1 }, "-=1.5")
+                .fromTo(".js-mv-title-content", { autoAlpha: 0 }, { autoAlpha: 1 }, "-=2.2")
+                .fromTo(
+                    ".js-header",
+                    { y: -90, autoAlpha: 0 },
+                    { y: 0, autoAlpha: 1, duration: 0.3 },
+                    "-=2"
+                );
+        } else {
+            // 768px以下のとき、ヘッダーをただちに表示する
+            gsap.to(".js-header", { autoAlpha: 1, duration: 0.3 });
+        }
     } else {
-        // 768px以下のとき、ヘッダーをただちに表示する
+        // .js-opening-mv-mask がない場合は、ヘッダーを直接表示する
         gsap.to(".js-header", { autoAlpha: 1, duration: 0.3 });
     }
-} else {
-    // .js-opening-mv-mask がない場合は、ヘッダーを直接表示する
-    gsap.to(".js-header", { autoAlpha: 1, duration: 0.3 });
-}
 
     $(document).ready(function () {
         // 要素の取得とスピードの設定
@@ -181,6 +186,7 @@ jQuery(function ($) {
         });
     });
 
+    // モーダルメニュー
     $(".js-modal-open").each(function () {
         $(this).on("click", function (e) {
             e.preventDefault();
@@ -192,8 +198,19 @@ jQuery(function ($) {
     });
     $(".js-modal").on("click", function () {
         $(this).animate({ opacity: 0 }, 600, function () {
-            $(this).css("display", "none");
+        $(this).css("display", "none");
         });
         $("html,body").css("overflow", "initial");
     });
+
+    // タブメニュー
+    $(".js-tab-menu").on("click", function () {
+        $(".js-tab-menu").removeClass("is-active");
+        $(".js-tab-content").removeClass("is-active");
+        $(this).addClass("is-active");
+        var number = $(this).data("number");
+        $("#" + number).addClass("is-active");
+    });
+
+
 });

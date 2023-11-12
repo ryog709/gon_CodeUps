@@ -21,7 +21,7 @@
     background-color: white;
 }
 
-.hamburger.is-current {
+.hamburger.is-open {
     right: 0;
 }
 
@@ -38,16 +38,16 @@
     top: rem(52);
 }
 
-.hamburger.hamburger.is-current span:nth-child(1) {
+.hamburger.hamburger.is-open span:nth-child(1) {
     transform: translateY(rem(11)) rotate(39deg);
     background-color: white;
 }
 
-.hamburger.hamburger.is-current span:nth-child(2) {
+.hamburger.hamburger.is-open span:nth-child(2) {
     opacity: 0;
 }
 
-.hamburger.hamburger.is-current span:nth-child(3) {
+.hamburger.hamburger.is-open span:nth-child(3) {
     transform: translateY(rem(-13)) rotate(-39deg);
     background-color: white;
 }

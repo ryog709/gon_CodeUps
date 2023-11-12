@@ -7,7 +7,9 @@
     pointer-events: auto;
     overflow-y: scroll;
     scrollbar-width: none;
-    padding: rem(14) rem(15) rem(95);
+    padding-top: rem(10);
+    padding-inline: rem(15);
+    padding-bottom: rem(95);
     display: none;
 }
 

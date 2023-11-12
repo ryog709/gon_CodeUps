@@ -1,0 +1,32 @@
+@use "global" as *;
+
+.blog {
+}
+
+.blog__inner {
+    position: relative;
+}
+
+.blog__inner::before {
+    position: absolute;
+    content: "";
+    width: rem(120);
+    height: rem(55);
+    left: calc(52.3% - min(48vw, rem(650)));
+    top: rem(-40);
+    z-index: -1;
+    background: url(../images/common/voice-fish.svg) center center / contain no-repeat;
+    @include mq("md") {
+        width: rem(308);
+        height: rem(138);
+    }
+}
+
+.blog__menu-wrap {
+    margin-top: rem(80);
+    @include mq("md") {
+        margin-top: rem(180);
+        display: flex;
+        gap:  rem(80);
+    }
+}

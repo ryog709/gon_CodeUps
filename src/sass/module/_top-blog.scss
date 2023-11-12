@@ -13,6 +13,16 @@
 
 .top-blog__inner {
     position: relative;
+    max-width: rem(642);
+    width: 100%;
+    padding-inline: rem(21);
+    margin-right: auto;
+    margin-left: auto;
+    @include mq("md") {
+      max-width: $inner + strip-unit($padding-pc) * 2;
+      padding-right: $padding-pc;
+      padding-left: $padding-pc;
+    }
 }
 
 .top-blog__inner::after {
@@ -40,7 +50,7 @@
 .top-blog__cards {
     margin-top: rem(30);
     @include mq("md") {
-        margin-top: rem(80);
+        margin-top: rem(84);
     }
 }
 

@@ -1,25 +1,37 @@
 @use "global" as *;
 
 .information {
-    padding: rem(86) 0;
-    @include mq("md") {
-        padding: rem(100) 0;
-    }
 }
 
+.information__inner {
+    position: relative;
+}
+
+.information__inner::before {
+    position: absolute;
+    content: "";
+    width: rem(120);
+    height: rem(55);
+    left: calc(52.3% - min(48vw, rem(650)));
+    top: rem(-94);
+    z-index: -1;
+    background: url(../images/common/voice-fish.svg) center center / contain no-repeat;
+    @include mq("md") {
+        top: rem(-69);
+        width: rem(308);
+        height: rem(138);
+    }
+}
 
 .information-tab__wrap {
-    margin-top: rem(28);
     border: 1px solid $green-accent;
-    padding:  rem(23);
+    padding: rem(23);
     @include mq("md") {
-        margin-top: rem(40);
         display: flex;
         gap: 4.444444%;
+        padding:  rem(24);
     }
 }
-
-
 
 .information-tab__content {
     @include mq("md") {
@@ -33,10 +45,9 @@
 .information-tab__head {
     font-size: rem(24);
     font-weight: $bold;
-    color: $green;
     line-height: 1;
     border-bottom: 1px solid $green-accent;
-    padding-bottom: rem(4);
+    padding-bottom: rem(9);
     @include mq("md") {
         font-size: rem(24);
         padding-bottom: rem(8);
@@ -48,17 +59,16 @@
     font-size: rem(16);
     font-weight: $regular;
     line-height: calc(24 / 16);
-    color: $green;
     @include mq("md") {
+        text-align : justify;
     }
 }
 
 .information-tab__image {
     margin-top: rem(8);
     @include mq("md") {
-        @include mq("md") {
-            width: 50%;
-        }
+        margin-top: initial;
+        width: 50%;
     }
 }
 
@@ -67,4 +77,7 @@
     object-fit: cover;
     width: 100%;
     height: 100%;
+    @include mq("md") {
+        aspect-ratio: 492/312;
+    }
 }

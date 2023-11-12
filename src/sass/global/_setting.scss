@@ -19,21 +19,6 @@ $font-en2: "Gotu", sans-serif;
 $font-jp: "Noto Sans JP", sans-serif;
 // ※検証ツールでしっかり反映されているか確認する
 
-body {
-    font-family: $font-jp;
-}
-
-/* ハンバーガーメニュー展開時、背景を固定 */
-body.is-current {
-    height: 100%;
-    overflow: hidden;
-}
-
-a:hover {
-    opacity: 0.7;
-    transition: all 0.3s;
-}
-
 // フォントウェイト
 $regular: 400;
 $medium: 500;
@@ -50,3 +35,35 @@ $green: #0d2936;
 $green2: #ddf0f1;
 $green-accent: #408f95;
 $gray: #d9d9d9;
+
+body {
+    font-family: $font-jp;
+    color: $green;
+}
+
+/* ハンバーガーメニュー展開時、背景を固定 */
+body.is-open {
+    height: 100%;
+    overflow: hidden;
+}
+
+/* 768px以上の場合のスタイル */
+@media (min-width: 768px) {
+    body.is-open {
+        height: auto;
+        overflow: visible;
+    }
+}
+
+a:hover {
+    opacity: 0.7;
+    transition: all 0.3s;
+}
+
+main {
+    flex: 1;
+}
+
+address {
+    font-style: normal;
+}

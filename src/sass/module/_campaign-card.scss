@@ -4,7 +4,7 @@
     box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.25);
     height: 100%;
     @include mq("md") {
-      padding-bottom: rem(44);
+        padding-bottom: rem(44);
     }
 }
 
@@ -14,17 +14,17 @@
     display: flex;
     flex-direction: column;
     @include mq("md") {
-      height: auto;
+        height: auto;
     }
 }
 
-.campaign-card__img img {
+.campaign-card__image img {
     aspect-ratio: 280/188;
     object-fit: cover;
     width: 100%;
     height: 100%;
     @include mq("md") {
-      aspect-ratio: 520/347;
+        aspect-ratio: 520/347;
     }
 }
 
@@ -37,7 +37,7 @@
     flex: 1;
     @include mq("md") {
         padding-top: rem(24);
-        padding-inline: rem(24);
+        padding-inline: rem(16);
         padding-bottom: initial;
     }
 }
@@ -58,7 +58,6 @@
 
 .campaign-card__title {
     font-size: rem(16);
-    color: $green;
     font-weight: $medium;
     line-height: 1;
     border-bottom: 1px solid $green-accent;
@@ -66,9 +65,13 @@
     padding-bottom: rem(12);
     flex: 1;
     @include mq("md") {
-        font-size: rem(24);
-        padding-bottom: rem(10);
+        font-size: rem(16);
+        padding-bottom: rem(12);
     }
+}
+
+.campaign-card__title.campaign-card__title-center {
+    text-align: center;
 }
 
 .campaign-card__text {
@@ -78,7 +81,7 @@
     margin-top: rem(10);
     @include mq("md") {
         font-size: rem(16);
-        margin-top: rem(23);
+        margin-top: rem(16);
     }
 }
 
@@ -102,7 +105,6 @@
     text-decoration-thickness: rem(3);
     display: flex;
     align-items: end;
-    color: $green;
     @include mq("md") {
         font-size: rem(24);
     }
@@ -116,13 +118,13 @@
     margin-left: rem(16);
     @include mq("md") {
         font-size: rem(40);
-        margin-left: rem(38);
+        margin-left: rem(26);
     }
 }
 
 .campaign-card__content-wrap {
     @include mq("md") {
-      margin-top: rem(26);
+        margin-top: rem(26);
     }
 }
 
@@ -131,7 +133,6 @@
         font-size: rem(16);
         line-height: calc(24 / 16);
         font-weight: $regular;
-        color: $green;
     }
 }
 
@@ -161,6 +162,7 @@
 .campaign-card__button {
     display: none;
     @include mq("md") {
+        display: block;
         text-align: center;
         margin-top: rem(18);
     }

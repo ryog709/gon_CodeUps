@@ -20,10 +20,14 @@
 }
 
 .blog-card__body {
-    margin-top: rem(20);
+    margin-top: rem(16);
+    @include mq("md") {
+        margin-top: rem(20);
+    }
 }
 
 .blog-card__date {
+    font-family: $font-en2;
     font-size: rem(12);
     color: $green;
     font-weight: $regular;
@@ -36,8 +40,11 @@
     font-weight: $medium;
     line-height: 1;
     border-bottom: 1px solid $green-accent;
-    padding-bottom: rem(4);
+    padding-bottom: rem(7);
     margin-top: rem(6);
+    @include mq("md") {
+        padding-bottom: rem(4);
+    }
 }
 
 .blog-card__text {

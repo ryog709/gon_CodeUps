@@ -15,19 +15,20 @@
     width: 100%;
 }
 
-.modal__img {
+.modal__image {
     width: 100%;
     cursor: pointer;
 }
 
-.modal__img img {
+.modal__image img {
     width: 100%;
     aspect-ratio: 920/586;
     object-fit: cover;
 }
 
-.gallery-modal-list__item:nth-of-type(6n + 1) .modal__img img,
-.gallery-modal-list__item:nth-of-type(6n + 6) .modal__img img {
+
+.gallery-modal-list__item:nth-of-type(6n + 1) .modal__image img,
+.gallery-modal-list__item:nth-of-type(6n + 6) .modal__image img {
     aspect-ratio: 492/746;
     width: min(100%, rem(500));
     margin-inline: auto;

@@ -26,7 +26,7 @@
 .top-aboutUs__sub-title {
     margin-top: rem(12);
     @include mq("md") {
-        margin-top: rem(16);
+        margin-top: rem(12);
     }
 }
 
@@ -106,7 +106,7 @@
         font-weight: $regular;
         line-height: calc(100 / 80);
         width: 50%;
-        text-align: justify;
+        // text-align: justify;
     }
 }
 
@@ -123,7 +123,6 @@
 }
 
 .top-aboutUs__text {
-    color: $green;
     @include mq("md") {
         color: $white;
     }

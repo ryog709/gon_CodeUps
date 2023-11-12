@@ -15,7 +15,7 @@
 .top-campaign__sub-title {
     margin-top: rem(12);
     @include mq("md") {
-        margin-top: rem(16);
+        margin-top: rem(13);
     }
 }
 
@@ -28,6 +28,12 @@
     top: 32%;
 }
 
+.top-campaign__swiper-button-prev:hover,
+.top-campaign__swiper-button-next:hover {
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
 .top-campaign__swiper-container {
     padding-left: rem(15);
     max-width: clamp(rem(1275), calc(rem(1275) + (100vw - rem(1440)) * 0.5), rem(2000));
@@ -36,7 +42,7 @@
     margin-right: 0;
     margin-top: rem(26);
     @include mq("md") {
-        margin-top: rem(35);
+        margin-top: rem(38);
     }
 }
 

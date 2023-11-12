@@ -92,7 +92,6 @@
 }
 
 .aboutUs__text {
-    color: $green;
     @include mq("md") {
         color: $white;
         grid-area: 3 / 4 / 5 / 7;

@@ -14,8 +14,23 @@
     @include mq(md) {
         grid-column: span 6;
         grid-row: span 1;
+        overflow: hidden;
     }
 }
+
+.gallery-list__item img {
+    @include mq(md) {
+        transition: 0.5s;
+    }
+}
+
+.gallery-list__item:hover img {
+    @include mq(md){
+        transform: scale(1.1);
+        transition: 0.5s;
+    }
+}
+
 
 .gallery-list__item:nth-of-type(6n + 1),
 .gallery-list__item:nth-of-type(6n + 6) {
