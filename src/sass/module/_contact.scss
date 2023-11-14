@@ -50,8 +50,9 @@
 }
 
 .contact__info-content {
-    padding-top: rem(34);
+    margin-top: rem(34);
     @include mq("md") {
+        margin: initial;
         width: 47%;
         padding-left: rem(15);
         border-left: rem(1) solid $green-accent;
