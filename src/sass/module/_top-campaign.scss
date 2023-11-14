@@ -25,7 +25,12 @@
     gap: rem(82);
     position: absolute;
     right: calc(50% - min(40vw,  rem(540)));
-    top: 32%;
+    top: 3%;
+}
+
+.top-campaign__swiper-button-prev,
+.top-campaign__swiper-button-next {
+    margin-top: initial;
 }
 
 .top-campaign__swiper-button-prev:hover,
@@ -49,6 +54,14 @@
 .top-campaign__swiper-slide {
     padding: rem(3) 0;
     height: auto;
+    max-width: rem(280);
+    width: 100%;
+    margin-right: rem(20);
+    @include mq("md") {
+        max-width: rem(333);
+        width: 100%;
+        margin-right: rem(40);
+    }
 }
 
 .top-campaign__button {

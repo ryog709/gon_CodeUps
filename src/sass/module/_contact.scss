@@ -12,18 +12,17 @@
     content: "";
     width: rem(109);
     height: rem(50);
-    right: calc(52% - min(48vw, rem(650)));
+    right: calc(50% - min(48vw, rem(172.5)));
     top: rem(-24);
     background: url(../images/common/contact-sea-goldie.svg) center center / contain no-repeat;
     @media (orientation: landscape) and (max-width: 767px) {
-        // @-moz-document url-prefix() {
-        // }
+
         right: calc(52% - min(44vw, rem(650)));
     }
     @include mq("md") {
         width: rem(301);
         height: rem(138);
-        right: calc(48% - min(46vw, rem(650)));
+        right: calc(50% - min(48vw, rem(670)));
         top: rem(-41);
     }
 }

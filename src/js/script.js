@@ -69,41 +69,15 @@ jQuery(function ($) {
         allowTouchMove: false, // マウスでのスワイプを禁止
     });
 
-    //画面幅に応じたカード型レイアウトスライダー
+    //カード型レイアウトスライダー
     if (document.querySelector(".js-card-swiper")) {
         const cardSwiper = new Swiper(".js-card-swiper", {
+            slidesPerView: 'auto',
             autoplay: true,
             speed: 2000,
             loop: true,
             navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev", },
         });
-        function updateSwiper() {
-            let width = document.documentElement.clientWidth;
-            let slidesPerView;
-            let spaceBetween;
-            if (width <= 375) {
-                slidesPerView = 1.26;
-                spaceBetween = 24;
-            } else if (width >= 2000) {
-                slidesPerView = 5;
-                spaceBetween = 40;
-            } else if (width >= 1280 && width < 2000) {
-                slidesPerView = 3.49;
-                spaceBetween = 40;
-            } else {
-                // 375px〜1280pxの範囲で線形補間
-                const t = (width - 375) / (1280 - 375);
-                slidesPerView = 1.26 + (3.49 - 1.26) * t;
-                spaceBetween = 20 + (40 - 20) * t;
-            }
-            cardSwiper.params.slidesPerView = slidesPerView;
-            cardSwiper.params.spaceBetween = spaceBetween;
-            cardSwiper.update();
-        }
-        // 最初に一度呼び出す
-        updateSwiper();
-        // 画面サイズが変わった時に再度呼び出す
-        window.addEventListener("resize", updateSwiper);
     }
 
     // gsapオープニングアニメーション
