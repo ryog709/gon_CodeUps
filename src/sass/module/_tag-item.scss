@@ -8,13 +8,25 @@
     color: $green-accent;
     font-weight: $regular;
     line-height: 1;
-    padding: rem(9) rem(11.5);
     border: 1px solid $green-accent;
     letter-spacing: 0.15em;
     background-color: $white;
+}
+
+.tag-item a {
+    display: block;
+    padding: rem(9) rem(11.5);
+    transition: 0.3s ease-in-out;
     @include mq("md") {
         padding: rem(10) rem(15);
     }
+}
+
+.tag-item a:hover {
+    background-color: $green-accent;
+    color: $white;
+    transition: 0.3s ease-in-out;
+    opacity: 1;
 }
 
 .tag-item.is-color {

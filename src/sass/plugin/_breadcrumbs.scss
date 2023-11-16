@@ -1,8 +1,22 @@
 @use "global" as *;
 
-.breadcrumbs {
-}
+
 .breadcrumbs {
     position: relative;
 }
 
+.breadcrumbs span {
+    font-size:  rem(14);
+}
+
+.breadcrumbs a span::after {
+    content: '';
+    display: inline-block;
+    transform: rotate(45deg);
+    width: .5em;
+    height: .5em;
+    margin-bottom: rem(2);
+    margin-inline: rem(5);
+    border-top: 1px solid $green;
+    border-right: 1px solid $green;
+}

@@ -5,16 +5,16 @@
 
 .campaign-card-contents__inner {
     position: relative;
-    // max-width: rem(600);
-    // width: 100%;
-    // padding-inline: rem(47.5);
-    // margin-inline: auto;
-    // position: relative;
-    // @include mq("md") {
-    //     max-width: $inner + strip-unit($padding-pc) * 2;
-    //     padding-right: $padding-pc;
-    //     padding-left: $padding-pc;
-    // }
+    max-width: rem(600);
+    width: 100%;
+    padding-inline: rem(47.5);
+    margin-inline: auto;
+    position: relative;
+    @include mq("md") {
+        max-width: $inner + strip-unit($padding-pc) * 2;
+        padding-right: $padding-pc;
+        padding-left: $padding-pc;
+    }
 }
 
 .campaign-card-contents__inner::before {

@@ -1,8 +1,8 @@
 @use "global" as *;
 
-.layout-wp-pagenavi {
+.layout-top-contact {
     margin-top: rem(80);
     @include mq("md") {
-        margin-top: rem(88);
+        margin-top: rem(140);
     }
 }

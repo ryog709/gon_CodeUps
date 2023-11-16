@@ -43,18 +43,18 @@
     margin-top: rem(16);
 }
 
-.opening-mv__mv-wrap {
+.opening-mv__wrap {
     display: flex;
     width: 100%;
     height: 100%;
 }
 
-.opening-mv__mv-left,
-.opening-mv__mv-right {
+.opening-mv__left,
+.opening-mv__right {
     width: 100%;
 }
-.opening-mv__mv-left img,
-.opening-mv__mv-right img {
+.opening-mv__left img,
+.opening-mv__right img {
     height: 100vh;
     width: 100%;
 }

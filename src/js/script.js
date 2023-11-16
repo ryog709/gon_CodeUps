@@ -95,7 +95,7 @@ jQuery(function ($) {
             openingTL
                 .to(".js-opening-mv-mask", { duration: 4, autoAlpha: 0 })
                 .fromTo(
-                    [".js-opening-mv-mv-left", ".js-opening-mv-mv-right"],
+                    [".js-opening-mv-left", ".js-opening-mv-right"],
                     { y: startHeight },
                     { y: 0, stagger: 0.12 }, "-=2.7"
                 )

@@ -12,7 +12,7 @@
     color: $green-accent;
     border: 1px solid $green-accent;
     background-color: $white;
-    padding: rem(7) rem(13.5);
+    padding: rem(6) rem(13.5);
     margin: 0 rem(6);
     white-space: nowrap;
     -webkit-transition: 0.3s ease-in-out;
@@ -34,6 +34,7 @@
 .wp-pagenavi a:hover {
     color: $white;
     background-color: $green-accent;
+    transition: 0.3s ease-in-out;
     opacity: 1;
 }
 
