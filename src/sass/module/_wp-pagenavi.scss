@@ -12,7 +12,8 @@
     color: $green-accent;
     border: 1px solid $green-accent;
     background-color: $white;
-    padding: rem(6) rem(13.5);
+    padding-block: rem(6);
+    padding-inline: rem(13.5);
     margin: 0 rem(6);
     white-space: nowrap;
     -webkit-transition: 0.3s ease-in-out;
@@ -24,11 +25,35 @@
 }
 
 .wp-pagenavi a:first-child {
-    margin-right: rem(35);
+    margin-right: rem(34);
+    padding-inline: rem(10);
 }
 
 .wp-pagenavi a:last-child {
-    margin-left: rem(35);
+    margin-left: rem(34);
+    padding-inline: rem(10);
+}
+
+.wp-pagenavi a:first-child::before,
+.wp-pagenavi a:last-child::after {
+    border-right: 1px solid $green-accent;
+    border-top: 1px solid $green-accent;
+    content: "";
+    display: inline-block;
+    margin-bottom:  rem(2);
+    height: 0.7em;
+    width: 0.7em;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.wp-pagenavi a:first-child::before {
+    margin-left:  rem(5);
+    transform: rotate(220deg);
+}
+
+.wp-pagenavi a:last-child::after {
+    margin-right:  rem(5);
+    transform: rotate(45deg);
 }
 
 .wp-pagenavi a:hover {
@@ -36,6 +61,13 @@
     background-color: $green-accent;
     transition: 0.3s ease-in-out;
     opacity: 1;
+}
+
+.wp-pagenavi a:first-child:hover::before,
+.wp-pagenavi a:last-child:hover::after  {
+    border-right: 1px solid $white;
+    border-top: 1px solid $white;
+    transition: 0.3s ease-in-out;
 }
 
 .wp-pagenavi span.current {

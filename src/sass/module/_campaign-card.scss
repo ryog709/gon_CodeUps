@@ -148,6 +148,10 @@
     }
 }
 
+.campaign-card__price-main.campaign-card__price-main--large-space {
+    margin-left: rem(41);
+}
+
 .campaign-card__content-wrap {
     @include mq("md") {
         margin-top: rem(26);
