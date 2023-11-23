@@ -54,23 +54,23 @@
     }
 }
 
-.top-aboutUs__image01 {
+.top-aboutUs__image-left {
     grid-area: 1 / 1 / 5 / 3;
     z-index: 1;
 }
 
-.top-aboutUs__image01 img {
+.top-aboutUs__image-left img {
     aspect-ratio: 128/194;
     object-fit: cover;
     width: 100%;
     height: 100%;
 }
 
-.top-aboutUs__image02 {
+.top-aboutUs__image-right {
     grid-area: 2 / 2 / 6 / 6;
 }
 
-.top-aboutUs__image02 img {
+.top-aboutUs__image-right img {
     aspect-ratio: 281/186;
     object-fit: cover;
     width: 100%;

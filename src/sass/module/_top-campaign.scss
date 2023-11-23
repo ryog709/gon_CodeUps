@@ -14,12 +14,6 @@
     text-align: center;
 }
 
-.top-campaign__sub-title {
-    margin-top: rem(12);
-    @include mq("md") {
-        margin-top: rem(13);
-    }
-}
 
 .top-campaign__swiper-buttons {
     display: flex;

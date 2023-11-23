@@ -36,7 +36,7 @@
     }
 }
 
-.aboutUs__image01 {
+.aboutUs__image-left {
     display: none;
     @include mq("md") {
         display: block;
@@ -45,7 +45,7 @@
     }
 }
 
-.aboutUs__image01 img {
+.aboutUs__image-left img {
     @include mq("md") {
         aspect-ratio: 128/194;
         object-fit: cover;
@@ -54,13 +54,13 @@
     }
 }
 
-.aboutUs__image02 {
+.aboutUs__image-right {
     @include mq("md") {
         grid-area: 2 / 2 / 6 / 6;
     }
 }
 
-.aboutUs__image02 img {
+.aboutUs__image-right img {
     aspect-ratio: 281/186;
     object-fit: cover;
     width: 100%;

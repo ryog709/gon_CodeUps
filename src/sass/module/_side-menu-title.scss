@@ -1,11 +1,12 @@
 @use "global" as *;
 
 .side-menu-title {
-    border-left: rem(10) solid $green-accent;
+    height:  rem(50);
+    border-left: rem(8) solid $green-accent;
     font-size: rem(24);
     font-weight: $regular;
     line-height: 1;
-    padding-left: rem(16);
+    padding-left: rem(19);
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -13,11 +14,12 @@
 
 .side-menu-title::before {
     content: "";
-    width: rem(50);
-    height: rem(50);
-    background-image: url(../images/common/tab-menu-icon.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-right: rem(8);
+    width: rem(42);
+    height: rem(42);
+    mask-image: url(../images/common/tab-menu-icon.svg);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: $green;
+    margin-right: rem(13);
 }

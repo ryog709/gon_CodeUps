@@ -8,6 +8,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     grid-column-gap: rem(20);
+    grid-row-gap: rem(20);
     @include mq("md") {
         grid-column-gap: rem(90);
     }
@@ -67,7 +68,7 @@
 
 .information-tab__list-item.is-active {
     display: block;
-    animation: fade 0.3s;
+    animation: fade 1s;
 }
 
 .information-tab__menu-item.is-active::before {

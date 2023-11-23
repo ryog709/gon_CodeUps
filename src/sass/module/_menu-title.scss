@@ -18,3 +18,20 @@
     top: rem(14);
     background: url(../images/common/starfish.svg) center center / contain no-repeat;
 }
+
+.menu-title.blog-detail-main__list-title {
+    color: $green;
+    font-weight: $regular;
+    line-height: 1;
+}
+
+.menu-title.blog-detail-main__list-title::before {
+    content: "";
+    top: rem(-1);
+    left: rem(-28);
+    mask-image: url(../images/common/starfish.svg);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: $green-accent;
+}

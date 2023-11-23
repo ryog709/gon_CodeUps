@@ -27,6 +27,7 @@
 
 .sub-mv__picture {
     height: inherit;
+    display: block;
 }
 
 .sub-mv__picture img {
@@ -43,6 +44,7 @@
     font-weight: $regular;
     font-size: rem(40);
     color: $white;
+    z-index: 1;
     @include mq("md") {
         font-size: rem(80);
         top: 59%;

@@ -29,16 +29,15 @@
     @include mq("md") {
         display: flex;
         gap: 4.444444%;
-        padding:  rem(24);
+        padding-block:  rem(23);
+        padding-inline: rem(24);
     }
 }
 
 .information-tab__content {
     @include mq("md") {
         width: 50%;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
+        padding-top: rem(63);
     }
 }
 

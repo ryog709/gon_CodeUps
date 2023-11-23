@@ -163,4 +163,13 @@ jQuery(function ($) {
         var number = $(this).data("number");
         $("#" + number).addClass("is-active");
     });
+
+    // アーカイブアコーディオンメニュー
+    $('.js-blog-side-menu-archive__list-item:first .js-blog-side-menu-archive__month-wrap').show();
+    $('.js-blog-side-menu-archive__list-item:first .js-archive-accordion').addClass('is-open');
+    $('.js-archive-accordion').on('click', function () {
+        $(this).next().slideToggle();
+        $(this).toggleClass('is-open');
+    });
+
 });
