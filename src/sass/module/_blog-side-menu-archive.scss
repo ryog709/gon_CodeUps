@@ -8,7 +8,7 @@
 }
 
 .blog-side-menu-archive__list-item + .blog-side-menu-archive__list-item {
-	margin-top: rem(14);
+	margin-top: rem(7);
 }
 
 .blog-side-menu-archive__year,
@@ -20,15 +20,18 @@
     cursor: pointer;
 }
 
+.blog-side-menu-archive__month a {
+    padding-block:  rem(7.5);
+    display: inline-block;
+    width: 25%;
+}
+
 .blog-side-menu-archive__month-wrap {
     padding-left: rem(28);
-    margin-top: rem(15);
+    margin-top: rem(8);
 	display: none;
 }
 
-.blog-side-menu-archive__month + .blog-side-menu-archive__month {
-    margin-top: rem(15);
-}
 
 .blog-side-menu-archive__year::before,
 .blog-side-menu-archive__month::before  {

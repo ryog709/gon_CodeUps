@@ -8,12 +8,6 @@
 	gap: rem(13);
 }
 
-.blog-detail-main__pagenavi {
-	margin-top: rem(41);
-	@include mq("md") {
-	  margin-top: rem(82);
-	}
-}
 
 .pagenavi a {
     color: $green-accent;

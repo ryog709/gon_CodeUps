@@ -6,6 +6,7 @@
 	}
 }
 
+
 .blog-detail-main__date {
 	font-size: rem(14);
 	line-height: 1;
@@ -25,14 +26,21 @@
 	}
 }
 
-.blog-detail-main__image {
+.blog-detail-main__content {
 	margin-top: rem(24);
 	@include mq("md") {
 		margin-top: rem(40);
 	}
 }
 
-.blog-detail-main__image img {
+.blog-detail-main__content figure:nth-of-type(n+2) {
+	margin-top: rem(24);
+	@include mq("md") {
+		margin-top: rem(40);
+	}
+}
+
+.blog-detail-main__content figure img {
 	aspect-ratio: 345/231;
 	object-fit: cover;
 	width: 100%;
@@ -42,14 +50,15 @@
 	}
 }
 
-.blog-detail-main__text {
+.blog-detail-main__content figcaption,
+.blog-detail-main__content p {
 	margin-top: rem(24);
 	@include mq("md") {
 		margin-top: rem(40);
 	}
 }
 
-.blog-detail-main__list {
+.blog-detail-main__content ul {
 	margin-top: rem(30);
 	padding-left: rem(28);
 	@include mq("md") {
@@ -57,6 +66,35 @@
 	}
 }
 
-.blog-detail-main__list-title + .blog-detail-main__list-title {
+.blog-detail-main__content li {
+	color: $green;
+    font-size: rem(16);
+    font-weight: $regular;
+    line-height: 1;
+    position: relative;
+}
+
+.blog-detail-main__content li::before {
+	position: absolute;
+	content: "";
+	width: rem(18);
+    height: rem(18);
+    top: rem(-1);
+    left: rem(-28);
+    mask-image: url(../images/common/starfish.svg);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: $green-accent;
+}
+
+.blog-detail-main__content li:nth-of-type(n+2) {
 	margin-top: rem(12);
+}
+
+.blog-detail-main__pagenavi {
+	margin-top: rem(41);
+	@include mq("md") {
+	  margin-top: rem(82);
+	}
 }
