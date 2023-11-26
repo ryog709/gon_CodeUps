@@ -58,9 +58,7 @@
     font-size: rem(16);
     font-weight: $regular;
     line-height: calc(24 / 16);
-    @include mq("md") {
-        text-align : justify;
-    }
+    text-align : justify;
 }
 
 .information-tab__image {
