@@ -49,6 +49,23 @@
     }
 }
 
+.information-tab__menu-item:hover {
+    color: $white;
+    background-color: $green-accent;
+    transition: 0.5s ease-in-out;
+    opacity: 1;
+}
+
+.information-tab__menu-item:hover::before {
+    transition: 0.5s ease-in-out;
+    mask-image: url(../images/common/tab-menu-icon.svg);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: $white;
+}
+
+
 .information-tab__menu-item.is-active {
     color: #fff;
     background-color: $green-accent;

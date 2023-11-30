@@ -1,38 +1,31 @@
 @use "global" as *;
 
-.blog-detail {
+.voice {
 }
 
-.blog-detail__inner {
+.voice__inner {
 	position: relative;
 }
 
-.blog-detail__inner::before {
+.voice__inner::before {
 	position: absolute;
     content: "";
     width: rem(120);
     height: rem(55);
     left: calc(52.3% - min(48vw, rem(650)));
-    top:  rem(-17);
+    top:  rem(-149);
     z-index: -1;
     background: url(../images/common/voice-fish.svg) center center / contain no-repeat;
     @include mq("md") {
         width: rem(308);
         height: rem(138);
-        top: rem(-67);
+        top: rem(-145);
     }
 }
 
-.blog-detail__wrap {
-	@include mq("md") {
-        display: flex;
-        gap: rem(86);
-    }
-}
-
-.blog-detail__side-menu {
-    margin-top: rem(75);
+.voice__wp-pagenavi {
+	margin-top: rem(80);
     @include mq("md") {
-        margin-top: initial;
+        margin-top: rem(72);
     }
 }

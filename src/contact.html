@@ -6,7 +6,7 @@
         <meta name="format-detection" content="telephone=no" />
         <meta name="robots" content="noindex" />
         <!-- meta情報 -->
-        <title>about - CodeUps</title>
+        <title>contact - CodeUps</title>
         <meta name="description" content="これはディスクリプションです" />
         <meta name="keywords" content="CodeUps、diving" />
         <!-- ogp -->
@@ -86,7 +86,7 @@
                                 </a>
                             </li>
                             <li class="header__nav-item">
-                                <a href="#">
+                                <a href="contact.html">
                                     <span class="header__nav-item-en">contact</span>
                                     <span class="header__nav-item-jp">お問合せ</span>
                                 </a>
@@ -142,7 +142,13 @@
                                     <li class="global-menu__item-head menu-title"><a href="faq.html">よくある質問</a></li>
                                 </ul>
                                 <ul class="global-menu__items">
-                                    <li class="global-menu__item-head menu-title"><a href="#">プライバシー<br class="u-mobile"/>ポリシー</a></li>
+                                    <li class="global-menu__item-head menu-title">
+                                        <a href="#">
+                                            プライバシー
+                                            <br class="u-mobile" />
+                                            ポリシー
+                                        </a>
+                                    </li>
                                 </ul>
                                 <ul class="global-menu__items">
                                     <li class="global-menu__item-head menu-title"><a href="#">利用規約</a></li>
@@ -161,13 +167,12 @@
             <section class="sub-mv layout-sub-mv">
                 <div class="sub-mv__inner">
                     <picture class="sub-mv__picture">
-                        <source srcset="./assets/images/common/aboutus-pc.webp" media="(min-width: 768px)" type="image/webp" />
-                        <img src="./assets/images/common/aboutus-sp.webp" alt="海中を漂う熱帯魚" />
+                        <source srcset="./assets/images/common/faq-mv-pc.webp" media="(min-width: 768px)" type="image/webp" />
+                        <img src="./assets/images/common/faq-mv-sp.webp" alt="エメラルドグリーンの海と砂浜" />
                     </picture>
-                    <h1 class="sub-mv__title">about&nbsp;us</h1>
+                    <h1 class="sub-mv__title">FAQ</h1>
                 </div>
             </section>
-
             <!-- breadcrumbs -->
             <div class="breadcrumbs layout-breadcrumbs">
                 <div class="breadcrumbs__inner inner">
@@ -176,152 +181,55 @@
                         <a href="#"><span>TOP</span></a>
                     </span>
                     <span>
-                        <span>私たちについて</span>
+                        <span>よくある質問</span>
                     </span>
                 </div>
             </div>
 
-            <!-- aboutUs -->
-            <article class="aboutUs layout-aboutUs">
-                <div class="aboutUs__inner inner">
-                    <div class="aboutUs__container">
-                        <div class="aboutUs__image-box">
-                            <figure class="aboutUs__image-left">
-                                <img src="./assets/images/common/aboutus01.webp" alt="オレンジ色の屋根に乗っているシーサー" width="194" height="128" loading="lazy" />
-                            </figure>
-                            <figure class="aboutUs__image-right">
-                                <img src="./assets/images/common/aboutus02.webp" alt="青い海の中を漂う黄色のカラフルな熱帯魚" width="281" height="186" loading="lazy" />
-                            </figure>
-                        </div>
-                        <p class="aboutUs__sub-head">
-                            <span>dive</span>&nbsp;into<br />the<span>&nbsp;ocean</span>
-                        </p>
-                        <p class="aboutUs__text">
-                            ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br />ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
-                        </p>
-                    </div>
-                    <div class="aboutUs__fish-image"></div>
+            <!-- contact-form -->
+            <div class="p-contact">
+                <div class="p-contact__inner inner">
+                    <form class="p-contact__form p-form" action="">
+                        <dl class="p-form__wrap">
+                            <dt class="p-form__label">
+                                名前
+                                <span>必須</span>
+                            </dt>
+                            <dd class="p-form__input p-form-input"><input type="text" name="name" required="required" /></dd>
+                        </dl>
+                        <dl class="p-form__wrap">
+                            <dt class="p-form__label">
+                                電話番号
+                                <span>必須</span>
+                            </dt>
+                            <dd class="p-form__input p-form-input">
+                                <input type="tel" name="tel" required="required" />
+                            </dd>
+                        </dl>
+                        <dl class="p-form__wrap">
+                            <dt class="p-form__label">
+                                メールアドレス
+                                <span>必須</span>
+                            </dt>
+                            <dd class="p-form__input p-form-input">
+                                <input type="email" name="email" required="required" />
+                            </dd>
+                            <dl class="p-form__wrap">
+                                <dt class="p-form__label">住所</dt>
+                                <dd class="p-form__select p-form-select">
+                                    <select>
+                                        <option hidden>選択してください</option>
+                                        <option value="東京">東京</option>
+                                        <option value="大阪">大阪</option>
+                                        <option value="福岡">福岡</option>
+                                        <option value="その他">その他</option>
+                                    </select>
+                                </dd>
+                            </dl>
+                        </dl>
+                    </form>
                 </div>
-            </article>
-
-            <!-- gallery -->
-            <section class="gallery layout-gallery">
-                <div class="gallery__inner inner">
-                    <div class="top-aboutUs__title-wrap section-title">
-                        <span class="section-title__sub">gallery</span>
-                        <h2 class="section-title__main">フォト</h2>
-                    </div>
-                    <ul class="gallery__list gallery-list">
-                        <li class="gallery-list__item js-modal-open" data-target="1">
-                            <img src="./assets/images/common/gallery01.webp" alt="熱帯魚と珊瑚礁" />
-                        </li>
-                        <li class="gallery-list__item js-modal-open" data-target="2">
-                            <img src="./assets/images/common/gallery02.webp" alt="エメラルドグリーンの海" />
-                        </li>
-                        <li class="gallery-list__item js-modal-open" data-target="3">
-                            <img src="./assets/images/common/gallery03.webp" alt="熱帯魚" />
-                        </li>
-                        <li class="gallery-list__item js-modal-open" data-target="4">
-                            <img src="./assets/images/common/gallery04.webp" alt="熱帯魚" />
-                        </li>
-                        <li class="gallery-list__item js-modal-open" data-target="5">
-                            <img src="./assets/images/common/gallery05.webp" alt="熱帯魚の群れ" />
-                        </li>
-                        <li class="gallery-list__item js-modal-open" data-target="6">
-                            <img src="./assets/images/common/gallery06.webp" alt="珊瑚と熱帯魚" />
-                        </li>
-                    </ul>
-                    <div class="gallery__sea-goldie-image u-desktop"></div>
-
-                    <!-- modal -->
-                    <div class="gallery__modal gallery-modal">
-                        <ul class="gallery-modal__list gallery-modal-list">
-                            <li class="gallery-modal-list__item modal js-modal" id="1">
-                                <div class="modal__inner">
-                                    <figure class="modal__image">
-                                        <img src="./assets/images/common/gallery01.webp" alt="熱帯魚と珊瑚礁" />
-                                    </figure>
-                                </div>
-                            </li>
-                            <li class="gallery-modal-list__item modal js-modal" id="2">
-                                <div class="modal__inner">
-                                    <figure class="modal__image">
-                                        <img src="./assets/images/common/gallery02.webp" alt="エメラルドグリーンの海" />
-                                    </figure>
-                                </div>
-                            </li>
-                            <li class="gallery-modal-list__item modal js-modal" id="3">
-                                <div class="modal__inner">
-                                    <figure class="modal__image">
-                                        <img src="./assets/images/common/gallery03.webp" alt="熱帯魚" />
-                                    </figure>
-                                </div>
-                            </li>
-                            <li class="gallery-modal-list__item modal js-modal" id="4">
-                                <div class="modal__inner">
-                                    <figure class="modal__image">
-                                        <img src="./assets/images/common/gallery04.webp" alt="熱帯魚" />
-                                    </figure>
-                                </div>
-                            </li>
-                            <li class="gallery-modal-list__item modal js-modal" id="5">
-                                <div class="modal__inner">
-                                    <figure class="modal__image">
-                                        <img src="./assets/images/common/gallery05.webp" alt="熱帯魚の群れ" />
-                                    </figure>
-                                </div>
-                            </li>
-                            <li class="gallery-modal-list__item modal js-modal" id="6">
-                                <div class="modal__inner">
-                                    <figure class="modal__image">
-                                        <img src="./assets/images/common/gallery06.webp" alt="珊瑚と熱帯魚" />
-                                    </figure>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <!-- contact -->
-            <section class="contact layout-contact">
-                <div class="contact__inner inner">
-                    <div class="contact__container">
-                        <div class="contact__access-content">
-                            <div class="contact__logo">
-                                <a href="#">
-                                    <img src="./assets/images/common/contact-codeups-logo.svg" alt="CodeUps" />
-                                </a>
-                            </div>
-                            <div class="contact__access">
-                                <address class="contact__text-wrap">
-                                    <p class="contact__text">沖縄県那覇市1-1</p>
-                                    <p class="contact__text">TEL:0120-000-0000</p>
-                                    <p class="contact__text">営業時間:8:30-19:00</p>
-                                    <p class="contact__text">定休日:毎週火曜日</p>
-                                </address>
-                                <div class="contact__map">
-                                    <iframe
-                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11422.225158092015!2d127.76178219960295!3d26.434769460374337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e51bb839672015%3A0x88661c0ac8410d40!2z6Z2S44Gu5rSe56qf!5e0!3m2!1sja!2sjp!4v1697484217969!5m2!1sja!2sjp"
-                                        title="マップ" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                                    </iframe>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="contact__info-content">
-                            <div class="contact__title-wrap section-title">
-                                <span class="section-title__sub section-title__sub--large">contact</span>
-                                <h2 class="section-title__main section-title__main--space">お問い合わせ</h2>
-                                <p class="section-title__info">ご予約・お問い合わせはコチラ</p>
-                            </div>
-                            <div class="contact__button">
-                                <a href="#" class="button">Contact us<span></span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contact__sea-goldie-image"></div>
-                </div>
-            </section>
+            </div>
         </main>
 
         <div class="page-top js-page-top">
@@ -334,7 +242,7 @@
             <div class="footer__inner inner">
                 <div class="footer__logo-wrap">
                     <div class="footer__logo">
-                        <a href="#">
+                        <a href="./">
                             <img src="./assets/images/common/codeups-logo.svg" alt="CodeUps" />
                         </a>
                     </div>
@@ -362,7 +270,7 @@
                         </div>
                         <div class="global-menu__wrap">
                             <ul class="global-menu__items">
-                                <li class="global-menu__item-head menu-title"><a href="information.html">ダイビング情報</a></li>
+                                <li class="global-menu__item-head menu-title"><a href="#">ダイビング情報</a></li>
                                 <li class="global-menu__item"><a href="#">ライセンス講習</a></li>
                                 <li class="global-menu__item"><a href="#">体験ダイビング</a></li>
                                 <li class="global-menu__item"><a href="#">ファンダイビング</a></li>
@@ -389,20 +297,24 @@
                                 <li class="global-menu__item-head menu-title"><a href="faq.html">よくある質問</a></li>
                             </ul>
                             <ul class="global-menu__items">
-                                <li class="global-menu__item-head menu-title"><a href="#">プライバシー<br class="u-mobile" />ポリシー</a></li>
+                                <li class="global-menu__item-head menu-title">
+                                    <a href="#">
+                                        プライバシー
+                                        <br class="u-mobile" />
+                                        ポリシー
+                                    </a>
+                                </li>
                             </ul>
                             <ul class="global-menu__items">
                                 <li class="global-menu__item-head menu-title"><a href="#">利用規約</a></li>
                             </ul>
                             <ul class="global-menu__items">
-                                <li class="global-menu__item-head menu-title"><a href="campaign.html">お問い合わせ</a></li>
+                                <li class="global-menu__item-head menu-title"><a href="contact.html">お問い合わせ</a></li>
                             </ul>
                         </div>
                     </div>
                 </nav>
-                <small class="footer__copyright">
-                    Copyright&nbsp;©&nbsp;2021&nbsp;-&nbsp;2023&nbsp;CodeUps&nbsp;LLC.&nbsp;All&nbsp;Rights&nbsp;Reserved.
-                </small>
+                <small class="footer__copyright">Copyright&nbsp;©&nbsp;2021&nbsp;-&nbsp;2023&nbsp;CodeUps&nbsp;LLC.&nbsp;All&nbsp;Rights&nbsp;Reserved.</small>
             </div>
         </footer>
     </body>

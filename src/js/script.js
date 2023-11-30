@@ -12,10 +12,7 @@ jQuery(function ($) {
         let footHeight = $(".js-footer").innerHeight();
         let scrollPositionFromTop = $(window).scrollTop();
         // ボタン位置の調整
-        let cssSettings =
-            scrollHeight - scrollPosition <= footHeight
-            ? { position: "absolute", bottom: footHeight + "px", top: "auto", }
-            : { position: "fixed", bottom: "0px", top: "auto", };
+        let cssSettings = scrollHeight - scrollPosition <= footHeight ? { position: "absolute", bottom: footHeight + "px", top: "auto" } : { position: "fixed", bottom: "0px", top: "auto" };
         $(".js-page-top").css(cssSettings);
         // ボタンの表示・非表示
         if (scrollPositionFromTop > 200) {
@@ -30,7 +27,8 @@ jQuery(function ($) {
         if ($(window).width() >= 768) {
             if ($(".js-drawer").hasClass("is-open")) {
                 $(".js-drawer").fadeOut(500, function () {
-                    $(this).removeClass("is-open"); });
+                    $(this).removeClass("is-open");
+                });
                 $(".js-hamburger").removeClass("is-open");
                 $(".js-header").removeClass("is-open");
             }
@@ -44,7 +42,8 @@ jQuery(function ($) {
                 // クラスを削除
                 $(".js-header").removeClass("is-open");
                 $(".js-drawer").fadeOut(500, function () {
-                    $(this).removeClass("is-open");});
+                    $(this).removeClass("is-open");
+                });
                 $(".js-hamburger").removeClass("is-open");
                 $("body").toggleClass("is-open");
             } else {
@@ -72,11 +71,11 @@ jQuery(function ($) {
     //カード型レイアウトスライダー
     if (document.querySelector(".js-card-swiper")) {
         const cardSwiper = new Swiper(".js-card-swiper", {
-            slidesPerView: 'auto',
+            slidesPerView: "auto",
             autoplay: true,
             speed: 2000,
             loop: true,
-            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev", },
+            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
         });
     }
 
@@ -88,27 +87,17 @@ jQuery(function ($) {
         const windowHeight = window.innerHeight;
         const startHeight = windowHeight;
         const openingTL = gsap.timeline({
-            defaults: { duration: 3, ease: "power4.inOut",},
+            defaults: { duration: 3, ease: "power4.inOut" },
         });
         // 768px以上のときのアニメーション
         if (windowWidth > 768) {
-            openingTL
-                .to(".js-opening-mv-mask", { duration: 4, autoAlpha: 0 })
-                .fromTo(
-                    [".js-opening-mv-left", ".js-opening-mv-right"],
-                    { y: startHeight },
-                    { y: 0, stagger: 0.12 }, "-=2.7"
-                )
-                .fromTo(".js-mv-swiper", { autoAlpha: 0 }, { autoAlpha: 1 }, "-=1.5")
-                .fromTo(".js-mv-title-content", { autoAlpha: 0 }, { autoAlpha: 1 }, "-=2.2")
-                .fromTo( ".js-header", { y: -90, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.3 }, "-=2"
-                );
+            openingTL.to(".js-opening-mv-mask", { duration: 4, autoAlpha: 0 }).fromTo([".js-opening-mv-left", ".js-opening-mv-right"], { y: startHeight }, { y: 0, stagger: 0.12 }, "-=2.7").fromTo(".js-mv-swiper", { autoAlpha: 0 }, { autoAlpha: 1 }, "-=1.5").fromTo(".js-mv-title-content", { autoAlpha: 0 }, { autoAlpha: 1 }, "-=2.2").fromTo(".js-header", { y: -90, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.3 }, "-=2");
         } else {
-            gsap.to(".js-header", { autoAlpha: 1, duration: 0.3 });// 768px以下のとき、ヘッダーをただちに表示する
+            gsap.to(".js-header", { autoAlpha: 1, duration: 0.3 }); // 768px以下のとき、ヘッダーをただちに表示する
         }
-        } else {
-            gsap.to(".js-header", { autoAlpha: 1, duration: 0.3 });// .js-opening-mv-mask がない場合は、ヘッダーを直接表示する
-        }
+    } else {
+        gsap.to(".js-header", { autoAlpha: 1, duration: 0.3 }); // .js-opening-mv-mask がない場合は、ヘッダーを直接表示する
+    }
 
     $(document).ready(function () {
         // 要素の取得とスピードの設定
@@ -144,15 +133,15 @@ jQuery(function ($) {
             e.preventDefault();
             var target = $(this).data("target");
             var modal = document.getElementById(target);
-            $(modal).css({ display: "flex", opacity: 0 }).animate({ opacity: 1 }, 600); // ここを修正
+            $(modal).css({ display: "flex", opacity: 0 }).animate({ opacity: 1 }, 600);
             $("html,body").css("overflow", "hidden");
         });
     });
     $(".js-modal").on("click", function () {
-        $(this).animate({ opacity: 0 }, 600, function () {
-        $(this).css("display", "none");
+            $(this).animate({ opacity: 0 }, 600, function () {
+            $(this).css("display", "none");
         });
-        $("html,body").css("overflow", "initial");
+            $("html,body").css("overflow", "initial");
     });
 
     // タブメニュー
@@ -165,11 +154,19 @@ jQuery(function ($) {
     });
 
     // アーカイブアコーディオンメニュー
-    $('.js-blog-side-menu-archive__list-item:first .js-blog-side-menu-archive__month-wrap').show();
-    $('.js-blog-side-menu-archive__list-item:first .js-archive-accordion').addClass('is-open');
-    $('.js-archive-accordion').on('click', function () {
-        $(this).next().slideToggle();
-        $(this).toggleClass('is-open');
+    $(".js-blog-side-menu-archive-list-item:first .js-blog-side-menu-archive-month-wrap").show();
+    $(".js-blog-side-menu-archive-list-item:first .js-archive-accordion").addClass("is-open");
+    $(".js-archive-accordion").on("click", function () {
+        $(this).next().slideToggle(550);
+        $(this).toggleClass("is-open");
     });
 
+    // faqアコーディオンメニュー
+    // 最初のアコーディオンメニューを開く
+    $(".js-faq-question").first().next().slideDown();
+    $(".js-faq-question").first().addClass("is-open");
+    $(".js-faq-question").on("click", function () {
+        $(this).next().slideToggle();
+        $(this).toggleClass("is-open");
+    });
 });

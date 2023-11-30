@@ -21,8 +21,12 @@
 }
 
 .blog-side-menu__wrap + .blog-side-menu__wrap {
-    margin-top: rem(80);
+    margin-top: rem(82);
     @include mq("md") {
       margin-top: rem(83);
     }
+}
+
+.blog-side-menu-popular__title {
+    padding-top: rem(10);
 }
