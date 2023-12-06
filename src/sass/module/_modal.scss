@@ -1,0 +1,36 @@
+@use "global" as *;
+
+.modal {
+    background: rgba(32, 32, 32, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.modal__inner {
+    margin: auto;
+    padding: 0 rem(20);
+    max-width: rem(960);
+    width: 100%;
+}
+
+.modal__image {
+    width: 100%;
+    cursor: pointer;
+}
+
+.modal__image img {
+    width: 100%;
+
+    aspect-ratio: 920/586;
+    object-fit: cover;
+}
+
+
+.gallery-modal-list__item:nth-of-type(6n + 1) .modal__image img,
+.gallery-modal-list__item:nth-of-type(6n + 6) .modal__image img {
+    aspect-ratio: 492/746;
+    width: min(100%, rem(400));
+    margin-inline: auto;
+}

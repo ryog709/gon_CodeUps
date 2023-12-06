@@ -1,0 +1,66 @@
+@use "global" as *;
+
+.top-campaign {
+    overflow-x: hidden;
+    padding-block: rem(5);
+}
+
+.top-campaign__header {
+    display: block;
+    position: relative;
+}
+
+.top-campaign__title-wrap {
+    text-align: center;
+}
+
+
+.top-campaign__swiper-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: rem(82);
+    position: absolute;
+    right: calc(50% - min(40vw,  rem(540)));
+    top: 3%;
+}
+
+.top-campaign__swiper-button-prev,
+.top-campaign__swiper-button-next {
+    margin-top: initial;
+}
+
+.top-campaign__swiper-button-prev:hover,
+.top-campaign__swiper-button-next:hover {
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.top-campaign__swiper-container {
+    margin-top: rem(26);
+    margin-right: calc(50% - 50vw);
+    width: 100vw;
+    @include mq("md") {
+        margin-top: rem(38);
+    }
+}
+
+.top-campaign__swiper-slide {
+    padding: rem(3) 0;
+    height: auto;
+    max-width: rem(280);
+    width: 100%;
+    margin-right: rem(20);
+    @include mq("md") {
+        max-width: rem(333);
+        width: 100%;
+        margin-right: rem(40);
+    }
+}
+
+.top-campaign__button {
+    text-align: center;
+    margin-top: rem(34);
+    @include mq("md") {
+        margin-top: rem(76);
+    }
+}

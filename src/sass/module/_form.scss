@@ -1,0 +1,115 @@
+@use "global" as *;
+
+.p-form {
+
+}
+
+.p-form__wrap {
+    @include mq(md){
+        display: flex;
+        align-items: center;
+    }
+}
+
+.p-form__wrap + .p-form__wrap {
+    margin-top: rem(30);
+}
+
+.p-form__label {
+    font-size: rem(15);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.08em;
+    @include mq(md){
+        max-width: rem(200);
+        width: 100%;
+    }
+}
+
+.p-form__label span {
+    margin-left: rem(10);
+    padding: rem(5);
+    display: inline-block;
+    font-size: rem(12);
+    color: #fff;
+    background-color: #D00000;
+}
+
+.p-form__input {
+    margin-top: rem(10);
+    flex-grow: 1;
+    @include mq(md){
+        margin-top: 0;
+    }
+}
+
+.p-form-input input {
+    padding: rem(8) rem(15);
+    width: 100%;
+    font-size: rem(15);
+    line-height: 1;
+    border-radius: 0;
+    border: 1px solid #ccc;
+    appearance: none;
+    background-color: transparent;
+    background-image: none;
+}
+
+.p-form-input input:focus {
+    border: 1px solid #ccc;
+    box-shadow: none;
+    outline: none;
+}
+
+.p-form__label {
+    font-size: rem(15);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.08em;
+    @include mq(md){
+        max-width: rem(200);
+        width: 100%;
+    }
+}
+
+.p-form__label span {
+    margin-left: rem(10);
+    padding: rem(5);
+    display: inline-block;
+    font-size: rem(12);
+    color: #fff;
+    background-color: #D00000;
+}
+
+.p-form__select {
+    margin-top: rem(10);
+    @include mq(md){
+        margin-top: 0;
+    }
+}
+
+
+.p-form-select select {
+    padding: rem(11.5) rem(50) rem(11.5) rem(15);
+    width: 100%;
+    font-size: rem(15);
+    line-height: 1;
+    border-radius: 0;
+    border: 1px solid #ccc;
+    background-image: url(./../images/common/arrow.svg);
+    background-repeat: no-repeat;
+    background-size: rem(15);
+    background-position: right rem(15) top rem(15);
+    appearance: none;
+    cursor: pointer;
+}
+
+.p-form-select select::-ms-expand {
+    display: none;
+}
+
+.p-form-select select:focus {
+    border: 1px solid #ccc;
+    box-shadow: none;
+    outline: none;
+}

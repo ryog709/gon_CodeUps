@@ -1,0 +1,60 @@
+@use "global" as *;
+
+.footer {
+    background-color: $green-accent;
+    padding: rem(48) 0 rem(56);
+    @include mq("md") {
+        padding: rem(77) 0 rem(86);
+    }
+}
+
+.footer__logo-wrap {
+    @include mq("md") {
+        display: flex;
+        align-items: flex-end;
+    }
+}
+
+.footer__logo {
+    max-width: rem(120);
+    width: 100%;
+    @include mq("md") {
+        max-width: rem(200);
+    }
+}
+
+.footer__sns-icon-wrap {
+    display: flex;
+    margin-top: rem(16);
+    @include mq("md") {
+        margin-left: rem(40);
+    }
+}
+
+.footer__sns-icon + .footer__sns-icon {
+    margin-left: rem(16);
+}
+
+.footer__sns-icon img {
+    width: rem(24);
+    height: rem(24);
+    @include mq("md") {
+        width: rem(32);
+        height: rem(32);
+    }
+}
+
+.footer__copyright {
+    font-family: $font-en2;
+    color: $white;
+    font-size: rem(12);
+    font-weight: $regular;
+    line-height: 1;
+    text-align: center;
+    margin-top: rem(26);
+    display: block;
+    @include mq("md") {
+        margin-top: rem(60);
+        font-size: rem(14);
+    }
+}

@@ -1,0 +1,65 @@
+@use "global" as *;
+
+.top-blog {
+    @include mq("md") {
+        background: linear-gradient(to bottom, transparent 60%, white 60%),
+            url("../images/common/blog-bg.webp");
+        background-size: cover;
+        padding-top: rem(100);
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+}
+
+.top-blog__inner {
+    position: relative;
+    max-width: rem(642);
+    width: 100%;
+    padding-inline: rem(21);
+    margin-right: auto;
+    margin-left: auto;
+    @include mq("md") {
+      max-width: $inner + strip-unit($padding-pc) * 2;
+      padding-right: $padding-pc;
+      padding-left: $padding-pc;
+    }
+}
+
+.top-blog__inner::after {
+    @include mq("md") {
+        position: absolute;
+        content: "";
+        width: rem(431);
+        height: rem(200);
+        left: calc(50% - min(48vw, rem(620)));
+        top: rem(-75);
+        background: url(../images/common/blog-fish.svg) center center / contain no-repeat;
+    }
+}
+
+.top-blog__title-wrap {
+    text-align: center;
+}
+
+.top-blog__sub-title {
+    margin-top: rem(12);
+    @include mq("md") {
+    }
+}
+
+.top-blog__cards {
+    margin-top: rem(30);
+    @include mq("md") {
+        margin-top: rem(80);
+    }
+}
+
+.top-blog__button {
+    text-align: center;
+    margin-top: rem(40);
+    @include mq("md") {
+        margin-top: rem(80);
+    }
+}
+
+

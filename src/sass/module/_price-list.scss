@@ -1,0 +1,103 @@
+@use "global" as *;
+
+.price-list {
+    max-width: rem(700);
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    border: 1px solid $green-accent;
+}
+
+
+.price-list_row {
+    display: flex;
+    flex-wrap: wrap;
+    @include mq("md") {
+        display: table-row;
+    }
+}
+
+.price-list__head {
+    width: 100%;
+    padding-block: rem(8);
+    padding-left: rem(50);
+    padding-right: rem(16);
+    font-size: rem(16);
+    font-weight: $bold;
+    color: #fff;
+    background-color: $green-accent;
+    @include mq(md){
+        width: 28.57142857142857%;
+        padding-inline: rem(16);
+        padding-top: rem(12);
+        padding-bottom: rem(84);
+    }
+}
+
+.price-list__head span {
+    position: relative;
+}
+
+.price-list__course,
+.price-list__value {
+    padding-block: rem(5);
+    font-size: rem(16);
+    min-height: rem(60);
+    display: flex;
+    align-items: center;
+    @include mq("md") {
+        display: table-cell;
+        padding-block: rem(17);
+        padding-inline: rem(16);
+    }
+}
+
+.price-list__course {
+    flex: 0.78;
+    border-top: 1px solid $green-accent;
+    border-left: none;
+    line-height: 1.5;
+    justify-content: center;
+    @include mq(md){
+        border-left: 1px solid $green-accent;
+        width: 48.57142857142857%;
+        text-align: left;
+    }
+}
+
+.price-list__value {
+    border-top: 1px solid $green-accent;
+    border-left: 1px solid $green-accent;
+    flex: 0.29;
+    justify-content: flex-end;
+    padding-right: rem(14);
+    @include mq(md){
+        width: 23.14285714285714%;
+        text-align: right;
+    }
+}
+
+.price-list__head span::before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: rem(24);
+    height: rem(24);
+    top: rem(10);
+    left: rem(-32);
+    top: 50%;
+    transform: translateY(-50%);
+    mask-image: url(../images/common/tab-menu-icon.svg);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: $white;
+    @include mq("md") {
+        width: rem(64);
+        height: rem(64);
+        bottom: rem(5);
+        left: 50%;
+        transform: translateX(-50%);
+        top: 130%;
+    }
+}
