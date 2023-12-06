@@ -46,3 +46,5 @@
 - 納品時（提出時）は`_gulpフォルダ`内の`node_modules`を削除すること
 - 提出時は`gulp build`コマンドを入力し、フォルダ内の整理を行うこと
 # gon_CodeUps
+
+test
