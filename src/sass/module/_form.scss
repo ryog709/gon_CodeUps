@@ -1,0 +1,396 @@
+@use "global" as *;
+
+.form__wrap {
+    padding-bottom: rem(24);
+    border-bottom: 1px dotted $green-accent;
+    @include mq("md") {
+        padding-bottom: rem(39);
+        display: flex;
+        align-items: flex-start;
+    }
+}
+
+.form__wrap.form__wrap--select {
+    @include mq("md") {
+        align-items: center;
+    }
+}
+
+.form__wrap {
+    margin-top: rem(26);
+    @include mq("md") {
+        margin-top: rem(39);
+    }
+}
+
+.form__label {
+    font-size: rem(16);
+    font-weight: $bold;
+    line-height: 1;
+    @include mq("md") {
+        max-width: rem(220);
+        width: 100%;
+    }
+}
+
+.form__label span {
+    margin-left: rem(8);
+    padding-block: rem(4.5);
+    padding-inline: rem(14);
+    display: inline-block;
+    font-size: rem(12);
+    color: $white;
+    background-color: $red;
+    letter-spacing: 4.8px;
+}
+
+.form__input,
+.form__radio,
+.form__textarea {
+    margin-top: rem(16);
+    @include mq("md") {
+        margin-top: initial;
+    }
+}
+
+.form__checkbox {
+    margin-top: rem(12);
+    @include mq("md") {
+        margin-top: rem(4);
+    }
+}
+
+.form__select {
+    margin-top: rem(21);
+    @include mq("md") {
+        margin-top: initial;
+    }
+}
+
+.form__input,
+.form__textarea {
+    flex-grow: 1;
+}
+
+.form__submit {
+    margin-top: rem(25);
+    text-align: center;
+    margin-inline: auto;
+    @include mq("md") {
+        margin-top: rem(40);
+    }
+}
+
+.form-input input {
+    padding: rem(7) rem(15);
+    width: 100%;
+    font-size: rem(16);
+    color: $green;
+    line-height: 1;
+    border-radius: 0;
+    border: 1px solid $green-accent;
+    appearance: none;
+    background-color: transparent;
+    background-image: none;
+}
+
+.form-input input:focus {
+    border: 1px solid $green-accent;
+    box-shadow: none;
+    outline: none;
+}
+
+.form-input input::placeholder {
+    font-size: rem(16);
+    font-weight: $regular;
+    color: $green2;
+}
+
+.form-select {
+    width: 100%;
+    position: relative;
+}
+
+.form-select::after {
+    position: absolute;
+    content: "";
+    border-left: rem(5) solid transparent;
+    border-right: rem(5) solid transparent;
+    border-bottom: rem(8) solid $green-accent;
+    display: inline-block;
+    right: rem(9);
+    top: 50%;
+    transform: translateY(-50%) rotate(180deg);
+    z-index: -1;
+}
+
+.form-select select {
+    padding-block: rem(13);
+    padding-left: rem(8);
+    padding-right: rem(50);
+    width: 100%;
+    color: $green;
+    font-size: rem(12);
+    font-weight: $regular;
+    line-height: 1;
+    border-radius: 0;
+    border: 1px solid $green-accent;
+    appearance: none;
+    cursor: pointer;
+    @include mq("md") {
+        padding-block: rem(8);
+    }
+}
+
+.form-select select::-ms-expand {
+    display: none;
+}
+
+.form-select select:focus {
+    border: 1px solid $green-accent;
+    box-shadow: none;
+    outline: none;
+}
+
+.form-checkbox label {
+    display: block;
+}
+
+.form-checkbox label:not(:first-of-type) {
+    margin-top: rem(3);
+}
+
+.form-checkbox input {
+    display: none;
+}
+
+.form-checkbox input + span {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 0 0 rem(25);
+    position: relative;
+    font-size: rem(16);
+    line-height: 1;
+}
+
+.form-checkbox input + span::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background: $white;
+    border: 1px solid $green-accent;
+    display: block;
+    width: rem(15);
+    height: rem(15);
+}
+
+.form-checkbox input + span::after {
+    content: "";
+    margin-top: rem(-2);
+    position: absolute;
+    top: 50%;
+    left: rem(2);
+    transform: translateY(-50%) rotate(-45deg);
+    display: block;
+    width: rem(12);
+    height: rem(6);
+    border-bottom: rem(2) solid $red;
+    border-left: rem(2) solid $red;
+    transition: 0.3s;
+    opacity: 0;
+}
+
+.form-checkbox input:checked + span::after {
+    opacity: 1;
+}
+
+.form-textarea textarea {
+    padding: rem(8) rem(15);
+    color: $green;
+    width: 100%;
+    height: rem(200);
+    font-size: rem(15);
+    border-radius: 0;
+    border: 1px solid $green-accent;
+    appearance: none;
+    background-color: transparent;
+    background-image: none;
+}
+
+.form-textarea textarea:focus {
+    border: 1px solid $green-accent;
+    box-shadow: none;
+    outline: none;
+}
+
+.form-textarea textarea {
+    padding: rem(8) rem(15);
+    width: 100%;
+    height: rem(200);
+    font-size: rem(15);
+    border-radius: 0;
+    border: 1px solid $green-accent;
+    appearance: none;
+    background-color: transparent;
+    background-image: none;
+}
+
+.form-textarea textarea:focus {
+    border: 1px solid $green-accent;
+    box-shadow: none;
+    outline: none;
+}
+
+.form-submit {
+    position: relative;
+    max-width: rem(202);
+    width: 100%;
+}
+
+.form-submit::before {
+    content: "";
+    border: 1px solid $green-accent;
+    position: absolute;
+    top: rem(5);
+    right: rem(-5);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.form-submit::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 8px;
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
+    position: absolute;
+    right: rem(61);
+    top: 45%;
+    transform: translateY(-80%) skew(45deg);
+    transition: all 0.7s;
+    z-index: 1;
+}
+
+.form-submit input[type="submit"] {
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    font-size: rem(14);
+    padding-block: rem(16);
+    padding-left: rem(16);
+    padding-right: rem(78);
+    background-color: $green-accent;
+    font-family: $font-en2, sans-serif;
+    border: 1px solid $green-accent;
+    border-radius: 0;
+    background-image: linear-gradient(90deg, $white 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 250%;
+    color: $white;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.3s cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+.form-submit:hover input[type="submit"] {
+    color: $green-accent;
+    opacity: 1;
+    background-position: 0;
+}
+
+.form-submit:hover::after {
+    content: "";
+    border-bottom: 1px solid $green-accent;
+    border-right: 1px solid $green-accent;
+    transition: 0.3s;
+}
+
+.form-submit button::-moz-focus-inner {
+    padding: 0;
+    border: none;
+}
+
+.form__check {
+    margin-top: rem(32);
+    width: 82%;
+    margin-inline: auto;
+    @include mq("md") {
+        margin-top: rem(72);
+        text-align: center;
+    }
+    [type="checkbox"]:checked + span::after {
+        opacity: 1;
+    }
+}
+
+.form__check span {
+    display: inline-block;
+    padding-left: rem(30);
+    font-size: rem(14);
+    line-height: calc(22 / 14);
+    position: relative;
+    @include mq("md") {
+        padding-left: rem(37);
+    }
+}
+
+.form__check span::before {
+    content: "";
+    display: inline-block;
+    width: rem(22);
+    height: rem(22);
+    background-color: $white;
+    border: 1px solid $green-accent;
+    position: absolute;
+    top: rem(2);
+    left: 0;
+    @include mq("md") {
+        top: 0;
+    }
+}
+
+.form__check span::after {
+    content: "";
+    position: absolute;
+    top: 30%;
+    left: rem(2);
+    transform: translateY(-70%) rotate(-45deg);
+    display: block;
+    width: rem(18);
+    height: rem(8);
+    border-bottom: rem(3) solid $red;
+    border-left: rem(3) solid $red;
+    transition: 0.5s;
+    opacity: 0;
+    @include mq("md") {
+      top: 45%;
+    }
+}
+
+.form__error {
+    color: #c94800;
+    font-size: rem(14);
+    text-align: center;
+    padding-left: 1em;
+    text-indent: -1em;
+    display: none;
+}
+
+.form__error.is-error {
+    display: block;
+}
+
+.input-error {
+    border: 1px solid #c94800;
+    background: rgba(201, 72, 0, 0.2);
+}
+
+input.is-error,
+textarea.is-error {
+    border: 1px solid #c94800;
+    background-color: rgba(201, 72, 0, 0.2);
+}

@@ -1,0 +1,32 @@
+@use "global" as *;
+
+.blog-side-menu {
+    @include mq("md") {
+        width: calc(294 / 1080) * 100%;
+    }
+}
+
+.blog__side-menu {
+    margin-top: rem(80);
+    @include mq("md") {
+        margin-top: initial;
+    }
+}
+
+.blog-side-menu__inner {
+    padding-inline: rem(25);
+    @include mq("md") {
+        padding: initial;
+    }
+}
+
+.blog-side-menu__wrap + .blog-side-menu__wrap {
+    margin-top: rem(82);
+    @include mq("md") {
+      margin-top: rem(83);
+    }
+}
+
+.blog-side-menu-popular__title {
+    padding-top: rem(10);
+}

@@ -1,0 +1,56 @@
+@use "global" as *;
+
+.top-voice {
+}
+
+.top-voice__inner {
+    position: relative;
+}
+
+.top-voice__inner::before {
+    @include mq("md") {
+        position: absolute;
+        content: "";
+        width: rem(308);
+        height: rem(138);
+        left: calc(50% - min(48vw, rem(620)));
+        top: rem(-118);
+        background: url(../images/common/voice-fish.svg) center center / contain no-repeat;
+    }
+}
+
+.top-voice__inner::after {
+    @include mq("md") {
+        position: absolute;
+        content: "";
+        width: rem(71);
+        height: rem(162);
+        right: rem(25);
+        bottom: rem(-70);
+        background: url(../images/common/voice-seahorse.svg) center center / contain no-repeat;
+    }
+}
+
+.top-voice__title-wrap {
+    text-align: center;
+}
+
+.top-voice__sub-title {
+    margin-top: rem(13);
+}
+
+.top-voice__cards {
+    margin-top: rem(49);
+    @include mq("md") {
+        margin-top: rem(32);
+    }
+}
+
+.top-voice__button {
+    text-align: center;
+    margin-top: rem(40);
+    @include mq("md") {
+        margin-top: rem(80);
+    }
+}
+
