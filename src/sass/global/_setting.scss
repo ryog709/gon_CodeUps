@@ -49,6 +49,16 @@ body.is-open {
     overflow: hidden;
 }
 
+.wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
 /* 768px以上の場合のスタイル */
 @media (min-width: 768px) {
     body.is-open {

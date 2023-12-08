@@ -6,6 +6,10 @@
     grid-template-rows: 1fr;
 }
 
+.global-menu.sitemap__menu {
+    color: $green-accent;
+}
+
 .footer__menu {
     margin-top: rem(28);
     @include mq("md") {
@@ -43,6 +47,13 @@
     }
 }
 
+.global-menu__left.global-menu__left-space .global-menu__wrap:nth-child(2) {
+    @include mq("md") {
+        margin-left: rem(50);
+    }
+}
+
+
 .global-menu__right .global-menu__wrap:nth-child(2) {
     @include mq("md") {
         margin-left: rem(20);
@@ -55,6 +66,10 @@
     @include mq("md") {
         margin-top: rem(14);
     }
+}
+
+.global-menu__items.global-menu__items--color > li {
+    color: $green;
 }
 
 .global-menu__item {
