@@ -27,8 +27,7 @@
 }
 
 .global-menu__right {
-    padding-left: rem(14);
-    margin-left: rem(10);
+    margin-left: rem(23);
     @include mq("md") {
         margin-left: rem(22);
         display: grid;
@@ -38,7 +37,20 @@
 }
 
 .global-menu__right.global-menu__right--space {
-    margin-left: rem(20);
+    margin-left: rem(38);
+}
+
+.global-menu__right.global-menu__right--space-large {
+    margin-left: rem(44);
+    @include mq("md") {
+        margin-left: rem(86);
+    }
+}
+
+.global-menu__right.global-menu__right--space-large .global-menu__wrap:nth-child(2) {
+    @include mq("md") {
+      margin-left: rem(67);
+    }
 }
 
 .global-menu__left .global-menu__wrap:nth-child(2) {
@@ -52,7 +64,6 @@
         margin-left: rem(50);
     }
 }
-
 
 .global-menu__right .global-menu__wrap:nth-child(2) {
     @include mq("md") {
@@ -84,4 +95,32 @@
     display: flex;
     align-items: center;
     padding: rem(12.7) 0;
+}
+
+.global-menu__item-head {
+    color: $white;
+    font-size: rem(16);
+    font-weight: $bold;
+    line-height: calc(18 / 16);
+    position: relative;
+}
+
+.global-menu__item-head::before {
+    position: absolute;
+    z-index: 100;
+    content: "";
+    width: rem(18);
+    height: rem(18);
+    left: rem(-22);
+    top: rem(14);
+    background: url(../images/common/starfish.svg) center center / contain no-repeat;
+}
+
+.global-menu__item-head.global-menu__item-head--icon-color::before {
+    mask-image: url(../images/common/starfish.svg);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: $green;
+    font-weight: $bold;
 }

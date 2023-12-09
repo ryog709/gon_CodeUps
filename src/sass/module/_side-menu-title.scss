@@ -1,7 +1,7 @@
 @use "global" as *;
 
-.side-menu-title {
-    height:  rem(50);
+.side- {
+    height: rem(50);
     border-left: rem(8) solid $green-accent;
     font-size: rem(24);
     font-weight: $regular;
@@ -12,7 +12,7 @@
     align-items: center;
 }
 
-.side-menu-title::before {
+.side-::before {
     content: "";
     width: rem(42);
     height: rem(42);
