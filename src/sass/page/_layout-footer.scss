@@ -6,3 +6,11 @@
         margin-top: rem(160);
     }
 }
+
+.layout-footer.layout-footer--space {
+    margin-top: initial;
+    padding-top: rem(90);
+    @include mq("md") {
+      padding-top: rem(228);
+    }
+}

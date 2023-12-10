@@ -1,6 +1,5 @@
 @use "global" as *;
 
-
 .breadcrumbs {
     position: relative;
 }
@@ -19,4 +18,14 @@
     margin-inline: rem(5);
     border-top: 1px solid $green;
     border-right: 1px solid $green;
+}
+
+.breadcrumbs.breadcrumbs--color-reverse span {
+    color: $white;
+}
+
+.breadcrumbs.breadcrumbs--color-reverse a span::after {
+    border-top: 1px solid $white;
+    border-right: 1px solid $white;
+
 }

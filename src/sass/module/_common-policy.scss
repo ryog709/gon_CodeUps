@@ -1,9 +1,9 @@
 @use "global" as *;
 
-.terms {
+.common-policy {
 }
 
-.terms__inner {
+.common-policy__inner {
     max-width: rem(630);
     width: 100%;
     padding-right: $padding-sp;
@@ -18,7 +18,7 @@
     }
 }
 
-.terms__inner::before {
+.common-policy__inner::before {
     position: absolute;
     content: "";
     width: rem(120);
@@ -34,53 +34,45 @@
     }
 }
 
-.terms__title {
+.common-policy__title {
     @include mq("md") {
         font-size: rem(32);
     }
 }
 
-.terms__introduction {
+.common-policy__introduction {
     margin-top: rem(40);
     font-size: rem(16);
     line-height: 2;
 }
 
-.terms__items {
+.common-policy__items {
     margin-top: rem(32);
     text-align: justify;
 }
 
-.terms__item-text:last-child {
-    margin-top: rem(30);
-}
-
-
-.terms__item + .terms__item {
+.common-policy__item + .common-policy__item {
     margin-top: rem(12);
     @include mq(md) {
         margin-top: rem(32);
     }
 }
 
-.terms__description {
+.common-policy__description {
     font-size: rem(16);
     line-height: 2;
-    @include mq(md) {
-    }
 }
 
-
-.terms__description-numbers {
+.common-policy__description-numbers {
     counter-reset: number;
 }
 
-.terms__description-number {
+.common-policy__description-number {
     padding-left: rem(22);
     text-indent: rem(-15);
 }
 
-.terms__description-number::before {
+.common-policy__description-number::before {
     content: counter(number) ". ";
     counter-increment: number;
 }
