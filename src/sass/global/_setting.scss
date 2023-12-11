@@ -55,6 +55,10 @@ body.is-open {
     min-height: 100vh;
 }
 
+.wrap.wrap-bg-color {
+    background-color: $green-accent;
+}
+
 main {
     flex: 1;
 }

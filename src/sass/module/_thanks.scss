@@ -6,6 +6,17 @@
 
 .thanks__inner {
     position: relative;
+    max-width: rem(630);
+    width: 100%;
+    padding-right: $padding-sp;
+    padding-left: $padding-sp;
+    margin-right: auto;
+    margin-left: auto;
+    @include mq("md") {
+      max-width: rem(750);
+      padding-right: $padding-pc;
+      padding-left: $padding-pc;
+    }
 }
 
 .thanks__inner::before {

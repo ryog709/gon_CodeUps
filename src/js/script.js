@@ -66,7 +66,7 @@ jQuery(function ($) {
             delay: 3000,
             disableOnInteraction: false, // ユーザー操作後に自動再生を再開する
         },
-        speed: 2000, // ２秒かけながら次の画像へ移動
+        speed: 2000,
         allowTouchMove: false, // マウスでのスワイプを禁止
     });
 
@@ -175,9 +175,9 @@ jQuery(function ($) {
         $(this).toggleClass("is-open");
     });
 
-    const form = document.querySelector(".form");
+    const form = document.querySelector(".js-form");
     if (form) {
-        const errorMessage = document.querySelector(".form__error");
+        const errorMessage = document.querySelector(".js-form__error");
         function validateInput(input) {
             if (!input.value.trim()) {
                 // 空白チェック

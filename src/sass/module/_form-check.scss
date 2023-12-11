@@ -1,0 +1,55 @@
+@use "global" as *;
+
+.form-check {
+    width: 82%;
+    @include mq("md") {
+        text-align: center;
+    }
+    [type="checkbox"]:checked + span::after {
+        opacity: 1;
+    }
+}
+
+.form-check span {
+    display: inline-block;
+    padding-left: rem(30);
+    font-size: rem(14);
+    line-height: calc(22 / 14);
+    position: relative;
+    @include mq("md") {
+        padding-left: rem(37);
+    }
+}
+
+.form-check span::before {
+    content: "";
+    display: inline-block;
+    width: rem(22);
+    height: rem(22);
+    background-color: $white;
+    border: 1px solid $green-accent;
+    position: absolute;
+    top: rem(2);
+    left: 0;
+    @include mq("md") {
+        top: 0;
+    }
+}
+
+.form-check span::after {
+    content: "";
+    position: absolute;
+    top: rem(7);
+    left: rem(2);
+    transform: rotate(-45deg);
+    display: block;
+    width: rem(18);
+    height: rem(8);
+    border-bottom: rem(3) solid $red;
+    border-left: rem(3) solid $red;
+    transition: 0.5s;
+    opacity: 0;
+    @include mq("md") {
+        top: rem(5);
+    }
+}

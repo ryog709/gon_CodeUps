@@ -1,20 +1,19 @@
 @use "global" as *;
 
 .price {
-
 }
 
 .price__inner {
-	position: relative;
+    position: relative;
 }
 
 .price__inner::before {
-	position: absolute;
+    position: absolute;
     content: "";
     width: rem(120);
     height: rem(55);
-    left: calc(52.3% - min(48vw, rem(650)));
-    top:  rem(-25);
+    left: calc(50% - min(48vw, rem(620)));
+    top: rem(-25);
     z-index: -1;
     background: url(../images/common/voice-fish.svg) center center / contain no-repeat;
     @include mq("md") {
@@ -25,12 +24,12 @@
 }
 
 .price__list {
-	margin-inline: auto;
+    margin-inline: auto;
 }
 
 .price__list + .price__list {
-	margin-top: rem(39);
-	@include mq("md") {
-	  margin-top: rem(80);
-	}
+    margin-top: rem(39);
+    @include mq("md") {
+        margin-top: rem(80);
+    }
 }

@@ -8,6 +8,14 @@
     }
 }
 
+
+.footer.footer--space {
+    padding-top: rem(90);
+    @include mq("md") {
+      padding-top: rem(228);
+    }
+}
+
 .footer__logo-wrap {
     @include mq("md") {
         display: flex;

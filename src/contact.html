@@ -165,7 +165,7 @@
                 <div class="sub-mv__inner">
                     <picture class="sub-mv__picture">
                         <source srcset="./assets/images/common/contact-mv-pc.webp" media="(min-width: 768px)" type="image/webp" />
-                        <img src="./assets/images/common/contact-mv-sp.webp" alt="エメラルドグリーンの海と砂浜" />
+                        <img src="./assets/images/common/contact-mv-sp.webp" alt="エメラルドグリーンの海" />
                     </picture>
                     <h1 class="sub-mv__title">contact</h1>
                 </div>
@@ -175,7 +175,7 @@
                 <div class="breadcrumbs__inner inner">
                     <!-- Breadcrumb NavXT 7.1.0 -->
                     <span>
-                        <a href="#"><span>TOP</span></a>
+                        <a href="./"><span>TOP</span></a>
                     </span>
                     <span>
                         <span>お問い合わせ</span>
@@ -186,8 +186,8 @@
             <!-- contact-form -->
             <section class="contact-form layout-contact-form">
                 <div class="contact-form__inner">
-                    <form class="contact-form__entry form" action="#" novalidate>
-                        <p class="form__error">※必須項目が入力されていません。<br class="u-mobile" />入力してください。</p>
+                    <form class="contact-form__entry form js-form" action="#" novalidate>
+                        <p class="form__error js-form__error">※必須項目が入力されていません。<br class="u-mobile" />入力してください。</p>
                         <dl class="form__wrap">
                             <dt class="form__label">
                                 <label for="name">お名前<span>必須</span></label>
@@ -250,7 +250,7 @@
                                 <textarea name="message" id="message" required="required"></textarea>
                             </dd>
                         </dl>
-                        <div class="form__check">
+                        <div class="form__check form-check">
                             <label>
                                 <input type="checkbox" />
                                 <span>個人情報の取り扱いについて同意のうえ送信します。</span>
