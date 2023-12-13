@@ -10,6 +10,28 @@
     }
 }
 
+.gallery__inner {
+    position: relative;
+}
+
+.gallery__inner::after {
+    display: none;
+    @include mq("md") {
+        position: absolute;
+        display: block;
+        content: "";
+        background: url(../images/common/contact-sea-goldie.svg) center center / contain no-repeat;
+        top: rem(-78);
+        width: rem(301);
+        height: rem(138);
+        right: calc(50% - min(48vw, rem(640)));
+    }
+}
+
+.gallery__title-wrap {
+    text-align: center;
+}
+
 .gallery-list__item {
     @include mq(md) {
         grid-column: span 6;
@@ -25,12 +47,11 @@
 }
 
 .gallery-list__item:hover img {
-    @include mq(md){
+    @include mq(md) {
         transform: scale(1.1);
         transition: 0.5s;
     }
 }
-
 
 .gallery-list__item:nth-of-type(6n + 1),
 .gallery-list__item:nth-of-type(6n + 6) {
@@ -55,17 +76,5 @@
     aspect-ratio: 345/523;
     @include mq("md") {
         aspect-ratio: 492/746;
-    }
-}
-
-.gallery__sea-goldie-image {
-    @include mq("md") {
-        position: absolute;
-        content: "";
-        background: url(../images/common/contact-sea-goldie.svg) center center / contain no-repeat;
-        top: rem(-78);
-        width: rem(301);
-        height: rem(138);
-        right: calc(51% - min(49vw, rem(650)));
     }
 }

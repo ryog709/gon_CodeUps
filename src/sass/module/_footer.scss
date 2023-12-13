@@ -8,11 +8,10 @@
     }
 }
 
-
 .footer.footer--space {
     padding-top: rem(90);
     @include mq("md") {
-      padding-top: rem(228);
+        padding-top: rem(228);
     }
 }
 

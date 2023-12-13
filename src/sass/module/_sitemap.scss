@@ -1,15 +1,14 @@
 @use "global" as *;
 
 .sitemap {
-
 }
 
 .sitemap__inner {
-	position: relative;
+    position: relative;
 }
 
 .sitemap__inner::before {
-	position: absolute;
+    position: absolute;
     content: "";
     width: rem(120);
     height: rem(55);

@@ -4,16 +4,16 @@
 }
 
 .voice__inner {
-	position: relative;
+    position: relative;
 }
 
 .voice__inner::before {
-	position: absolute;
+    position: absolute;
     content: "";
     width: rem(120);
     height: rem(55);
     left: calc(50% - min(48vw, rem(620)));
-    top:  rem(-149);
+    top: rem(-149);
     z-index: -1;
     background: url(../images/common/voice-fish.svg) center center / contain no-repeat;
     @include mq("md") {
@@ -24,7 +24,7 @@
 }
 
 .voice__wp-pagenavi {
-	margin-top: rem(80);
+    margin-top: rem(80);
     @include mq("md") {
         margin-top: rem(72);
     }

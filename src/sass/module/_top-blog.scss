@@ -2,8 +2,7 @@
 
 .top-blog {
     @include mq("md") {
-        background: linear-gradient(to bottom, transparent 60%, white 60%),
-            url("../images/common/blog-bg.webp");
+        background: linear-gradient(to bottom, transparent 60%, white 60%), url("../images/common/blog-bg.webp");
         background-size: cover;
         padding-top: rem(100);
         background-repeat: no-repeat;
@@ -19,9 +18,9 @@
     margin-right: auto;
     margin-left: auto;
     @include mq("md") {
-      max-width: $inner + strip-unit($padding-pc) * 2;
-      padding-right: $padding-pc;
-      padding-left: $padding-pc;
+        max-width: $inner + strip-unit($padding-pc) * 2;
+        padding-right: $padding-pc;
+        padding-left: $padding-pc;
     }
 }
 
@@ -61,5 +60,3 @@
         margin-top: rem(80);
     }
 }
-
-

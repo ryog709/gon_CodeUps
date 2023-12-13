@@ -1,19 +1,14 @@
 @use "global" as *;
 
 .blog-side-menu-review {
-
-}
-
-.blog-side-menu-review__title {
-
 }
 
 .blog-side-menu-review__image {
-	margin-top: rem(20);
+    margin-top: rem(20);
 }
 
 .blog-side-menu-review__image img {
-	aspect-ratio: 294/218;
+    aspect-ratio: 294/218;
     object-fit: cover;
     width: 100%;
     height: 100%;
@@ -33,6 +28,6 @@
 }
 
 .blog-side-menu-review__button {
-	margin-top: rem(40);
+    margin-top: rem(40);
     text-align: center;
 }

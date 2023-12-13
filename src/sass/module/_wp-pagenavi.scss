@@ -40,19 +40,19 @@
     border-top: 1px solid $green-accent;
     content: "";
     display: inline-block;
-    margin-bottom:  rem(2);
+    margin-bottom: rem(2);
     height: 0.7em;
     width: 0.7em;
     transition: border-color 0.3s ease-in-out;
 }
 
 .wp-pagenavi a:first-child::before {
-    margin-left:  rem(5);
+    margin-left: rem(5);
     transform: rotate(220deg);
 }
 
 .wp-pagenavi a:last-child::after {
-    margin-right:  rem(5);
+    margin-right: rem(5);
     transform: rotate(45deg);
 }
 
@@ -64,7 +64,7 @@
 }
 
 .wp-pagenavi a:first-child:hover::before,
-.wp-pagenavi a:last-child:hover::after  {
+.wp-pagenavi a:last-child:hover::after {
     border-right: 1px solid $white;
     border-top: 1px solid $white;
     transition: 0.3s ease-in-out;
