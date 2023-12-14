@@ -107,3 +107,7 @@ textarea.is-error {
     border: 1px solid $red;
     background-color: rgba(201, 72, 0, 0.2);
 }
+
+input.is-error::placeholder {
+    color: $white;
+}
