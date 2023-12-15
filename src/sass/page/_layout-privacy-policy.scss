@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.layout-common-policy {
+.layout-legal-document {
     margin-top: rem(50);
     @include mq("md") {
         margin-top: rem(148);
