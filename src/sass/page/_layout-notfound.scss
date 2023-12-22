@@ -1,8 +1,0 @@
-@use "global" as *;
-
-.layout-notfound {
-	margin-top: rem(59);
-	@include mq("md") {
-	  margin-top: rem(134);
-	}
-}
