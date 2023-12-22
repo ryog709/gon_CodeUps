@@ -1,0 +1,17 @@
+@use "global" as *;
+
+.blog-side-menu-campaign {
+}
+
+.blog-side-menu-campaign__card {
+	margin-top: rem(24);
+}
+
+.blog-side-menu-campaign__card + .blog-side-menu-campaign__card {
+	margin-top: rem(40);
+}
+
+.blog-side-menu-campaign__button {
+	margin-top: rem(40);
+	text-align: center;
+}

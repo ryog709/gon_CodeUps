@@ -1,0 +1,113 @@
+@use "global" as *;
+
+.form__wrap {
+    padding-bottom: rem(24);
+    border-bottom: 1px dotted $green-accent;
+    @include mq("md") {
+        padding-bottom: rem(39);
+        display: flex;
+        align-items: flex-start;
+    }
+}
+
+.form__wrap.form__wrap--select {
+    @include mq("md") {
+        align-items: center;
+    }
+}
+
+.form__wrap {
+    margin-top: rem(26);
+    @include mq("md") {
+        margin-top: rem(39);
+    }
+}
+
+.form__label {
+    font-size: rem(16);
+    font-weight: $bold;
+    line-height: 1;
+    @include mq("md") {
+        max-width: rem(220);
+        width: 100%;
+    }
+}
+
+.form__label span {
+    margin-left: rem(8);
+    padding-block: rem(4.5);
+    padding-inline: rem(14);
+    display: inline-block;
+    font-size: rem(12);
+    color: $white;
+    background-color: $red;
+    letter-spacing: 4.8px;
+}
+
+.form__input,
+.form__radio,
+.form__textarea {
+    margin-top: rem(16);
+    @include mq("md") {
+        margin-top: initial;
+    }
+}
+
+.form__check {
+    margin-top: rem(32);
+    margin-inline: auto;
+    @include mq("md") {
+        margin-top: rem(72);
+    }
+}
+
+.form__checkbox {
+    margin-top: rem(12);
+    @include mq("md") {
+        margin-top: rem(4);
+    }
+}
+
+.form__select {
+    margin-top: rem(21);
+    @include mq("md") {
+        margin-top: initial;
+    }
+}
+
+.form__input,
+.form__textarea {
+    flex-grow: 1;
+}
+
+.form__submit {
+    margin-top: rem(25);
+    text-align: center;
+    margin-inline: auto;
+    @include mq("md") {
+        margin-top: rem(40);
+    }
+}
+
+.form__error {
+    color: $red;
+    font-size: rem(14);
+    text-align: center;
+    padding-left: 1em;
+    text-indent: -1em;
+    display: none;
+}
+
+.form__error.is-error {
+    display: block;
+}
+
+input.is-error,
+textarea.is-error {
+    border: 1px solid $red;
+    background-color: rgba(201, 72, 0, 0.2);
+}
+
+input.is-error::placeholder {
+    color: $white;
+}

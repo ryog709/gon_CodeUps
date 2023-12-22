@@ -1,0 +1,115 @@
+@use "global" as *;
+
+.aboutUs {
+}
+
+.aboutUs__inner {
+    position: relative;
+}
+
+.aboutUs__inner::before {
+    position: absolute;
+    content: "";
+    background: url(../images/common/voice-fish.svg) center center / contain no-repeat;
+    width: rem(120);
+    height: rem(55);
+    top: rem(-23);
+    left: calc(50% - min(48vw, rem(620)));
+    z-index: -1;
+    @include mq("md") {
+        width: rem(301);
+        height: rem(138);
+        top: rem(-68);
+    }
+}
+
+.aboutUs__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    grid-row-gap: rem(40);
+    @include mq("md") {
+        max-width: initial;
+        display: grid;
+        grid-template-columns: repeat(3, 18.55%) 3.7% repeat(2, 18.51%) 3.7%;
+        grid-template-rows: 12.26% 18.15% repeat(2, 1fr) 8.49%;
+    }
+}
+
+.aboutUs__image-box {
+    grid-area: 1 / 1 / 2 / 2;
+    @include mq("md") {
+        display: grid;
+        grid-template-columns: repeat(2, 18.55%) repeat(3, 1fr);
+        grid-template-rows: 12.26% repeat(3, 1fr) 8.49%;
+        width: auto;
+        height: auto;
+        aspect-ratio: 1080/661;
+        grid-area: 1 / 1 / 6 / 8;
+    }
+}
+
+.aboutUs__image-left {
+    display: none;
+    @include mq("md") {
+        display: block;
+        grid-area: 1 / 1 / 5 / 3;
+        z-index: 1;
+    }
+}
+
+.aboutUs__image-left img {
+    @include mq("md") {
+        aspect-ratio: 128/194;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.aboutUs__image-right {
+    @include mq("md") {
+        grid-area: 2 / 2 / 6 / 6;
+    }
+}
+
+.aboutUs__image-right img {
+    aspect-ratio: 281/186;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.aboutUs__sub-head {
+    grid-area: 1 / 1 / 2 / 2;
+    padding-top: rem(25);
+    padding-left: rem(23);
+    font-size: rem(40);
+    font-weight: $regular;
+    color: $white;
+    line-height: 1;
+    font-family: $font-en2;
+    font-size: clamp(rem(40), 25 / 375 * 100vw, rem(80));
+    @include mq("md") {
+        padding-left: initial;
+        padding-top: initial;
+        grid-area: 3 / 2 / 5 / 4;
+        line-height: calc(100 / 80);
+        text-align: justify;
+        z-index: 1;
+    }
+}
+
+.aboutUs__sub-head span {
+    text-transform: capitalize;
+}
+
+.aboutUs__text {
+    @include mq("md") {
+        color: $white;
+        grid-area: 3 / 4 / 5 / 7;
+        max-width: 400px;
+        margin-left: max(rem(20), rem(40));
+        padding-top: 50px;
+    }
+}

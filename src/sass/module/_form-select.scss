@@ -1,0 +1,47 @@
+@use "global" as *;
+
+.form-select {
+    width: 100%;
+    position: relative;
+}
+
+.form-select::after {
+    position: absolute;
+    content: "";
+    border-left: rem(5) solid transparent;
+    border-right: rem(5) solid transparent;
+    border-bottom: rem(8) solid $green-accent;
+    display: inline-block;
+    right: rem(9);
+    top: 50%;
+    transform: translateY(-50%) rotate(180deg);
+    z-index: -1;
+}
+
+.form-select select {
+    padding-block: rem(13);
+    padding-left: rem(8);
+    padding-right: rem(50);
+    width: 100%;
+    color: $green;
+    font-size: rem(12);
+    font-weight: $regular;
+    line-height: 1;
+    border-radius: 0;
+    border: 1px solid $green-accent;
+    appearance: none;
+    cursor: pointer;
+    @include mq("md") {
+        padding-block: rem(8);
+    }
+}
+
+.form-select select::-ms-expand {
+    display: none;
+}
+
+.form-select select:focus {
+    border: 1px solid $green-accent;
+    box-shadow: none;
+    outline: none;
+}

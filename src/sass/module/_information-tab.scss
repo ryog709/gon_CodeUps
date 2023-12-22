@@ -1,0 +1,102 @@
+@use "global" as *;
+
+.information-tab {
+}
+
+.information-tab__menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: rem(20);
+    grid-row-gap: rem(20);
+    @include mq("md") {
+        grid-column-gap: rem(90);
+    }
+}
+
+.information-tab__menu-item {
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+    padding:  rem(10);
+    width: 100%;
+    font-size: rem(14);
+    font-size: clamp(rem(14), 2vw, rem(24));
+    line-height: 1.4;
+    color: #73b2c8;
+    background-color: $green2;
+    text-align: center;
+    cursor: pointer;
+    @include mq(md) {
+        padding-block: rem(13);
+        width: min(100%, rem(300));
+        margin-inline: auto;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.information-tab__menu-item::before {
+    @include mq("md") {
+        content: "";
+        width: rem(64);
+        height: rem(64);
+        mask-image: url(../images/common/tab-menu-icon.svg);
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        mask-position: center;
+        background-color: $green-accent;
+        margin-right: rem(8);
+    }
+}
+
+.information-tab__menu-item:hover {
+    color: $white;
+    background-color: $green-accent;
+    transition: 0.5s ease-in-out;
+    opacity: 1;
+}
+
+.information-tab__menu-item:hover::before {
+    transition: 0.5s ease-in-out;
+    mask-image: url(../images/common/tab-menu-icon.svg);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: $white;
+}
+
+
+.information-tab__menu-item.is-active {
+    color: #fff;
+    background-color: $green-accent;
+}
+
+.information-tab__list {
+    margin-top: rem(15);
+    @include mq("md") {
+      margin-top: rem(24);
+    }
+}
+
+.information-tab__list-item {
+    display: none;
+    background-color: #fff;
+}
+
+.information-tab__list-item.is-active {
+    display: block;
+    animation: fade 1s;
+}
+
+.information-tab__menu-item.is-active::before {
+    background-color: $white;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
