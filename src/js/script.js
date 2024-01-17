@@ -179,7 +179,6 @@ jQuery(function ($) {
     });
 
     // faqアコーディオンメニュー
-    // 最初のアコーディオンメニューを開く
     $(".js-faq-question").next().slideDown();
     $(".js-faq-question").addClass("is-open");
     $(".js-faq-question").on("click", function () {

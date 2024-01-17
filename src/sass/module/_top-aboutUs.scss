@@ -34,28 +34,17 @@
     margin-top: rem(31);
     @include mq("md") {
         margin-top: rem(40);
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-        place-items: center;
+        position: relative;
     }
 }
 
 .top-aboutUs__image-box {
-    display: grid;
-    grid-template-columns: repeat(2, 18.55%) repeat(3, 1fr);
-    grid-template-rows: 12.26% repeat(3, 1fr) 8.49%;
-    aspect-ratio: 345/212;
-    width: auto;
-    height: auto;
-    @include mq("md") {
-        aspect-ratio: 1080/661;
-        grid-area: 1 / 1 / 2 / 2;
-    }
+    position: relative;
 }
 
 .top-aboutUs__image-left {
-    grid-area: 1 / 1 / 5 / 3;
+    position: relative;
+    width: 37.10144%;
     z-index: 1;
 }
 
@@ -67,7 +56,10 @@
 }
 
 .top-aboutUs__image-right {
-    grid-area: 2 / 2 / 6 / 6;
+    position: relative;
+    width: 81.44927%;
+    margin-left: auto;
+    margin-top: -48.7%;
 }
 
 .top-aboutUs__image-right img {
@@ -81,15 +73,14 @@
     margin-top: rem(40);
     @include mq("md") {
         margin-top: initial;
-        grid-area: 1 / 1 / 2 / 2;
+        position: absolute;
+        top: 48%;
+        left: 57.5%;
+        transform: translate(-50%, -50%);
+        width: 77.77777777777778%;
         display: flex;
         gap: rem(40);
-        z-index: 4;
-        max-width: rem(840);
-        width: 100%;
-        margin-left: auto;
-        margin-right: rem(40);
-        padding-bottom: rem(20);
+        z-index: 2;
     }
 }
 
